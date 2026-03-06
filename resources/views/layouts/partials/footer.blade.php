@@ -26,21 +26,20 @@
             <div class="col-2">
                 <h5>MENU</h5>
                 <ul class="mb-0 list-unstyled footer-menu">
-                    <li><a href="">Strona główna</a></li>
+                    <li><a href="/">Strona główna</a></li>
                     <li><a href="">Inwestycje</a></li>
-                    <li><a href="">Relacje inwestorskie</a></li>
-                    <li><a href="">O firmie</a></li>
-                    <li><a href="">Kontakt</a></li>
+                    <li><a href="/relacje-inwestorskie/">Relacje inwestorskie</a></li>
+                    <li><a href="/o-firmie/">O firmie</a></li>
+                    <li><a href="/kontakt/">Kontakt</a></li>
                 </ul>
             </div>
             <div class="col-2">
                 <h5>INFORMACJE</h5>
                 <ul class="mb-0 list-unstyled footer-menu">
-                    <li><a href="">Polityka prywatności</a></li>
-                    <li><a href="">Kontakt do mediów</a></li>
+                    <li><a href="/polityka-prywatnosci/">Polityka prywatności</a></li>
                     <li><a href="">Nota prawna</a></li>
-                    <li><a href="">Aktualności</a></li>
-                    <li><a href="">Blog</a></li>
+                    <li><a href="/aktualnosci/">Aktualności</a></li>
+                    <li><a href="/blog/">Blog</a></li>
                 </ul>
             </div>
             <div class="col-3">
