@@ -515,6 +515,37 @@ article {
 }
 
 
+/* Zrealizowane projekty
+================================================== */
+.zrealizowane {
+    padding: 30px;
+    background: white;
+    border: 1px solid #f1f1f1;
+    margin-left: -1px;
+    margin-right: -1px;
+    &:hover .zrealizowane-img img {
+        transform: scale(1.1);
+    }
+    li {
+        display: flex;
+        align-items: center;
+        font-size: 15px !important;
+        gap: 6px;
+        line-height: 26px !important;
+    }
+}
+.zrealizowane-img {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .3s;
+    }
+}
+
 /* Page
 ================================================== */
 #page {
