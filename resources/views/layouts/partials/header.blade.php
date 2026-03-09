@@ -20,7 +20,16 @@
                             </ul>
                         </li>
                         <li><a href="{{ route('front.menu.show', ['uri' => 'relacje-inwestorskie']) }}" class="dm-sans-500">Relacje inwestorskie</a></li>
-                        <li><a href="{{ route('front.menu.show', ['uri' => 'o-firmie']) }}" class="dm-sans-500">O firmie</a></li>
+                        <li>
+                            <span class="dm-sans-500">O firmie <i>▼</i></span>
+                            <ul class="mb-0 list-unstyled submenu">
+                                <li><a href="{{ route('front.menu.show', ['uri' => 'o-firmie']) }}">O nas</a></li>
+                                <li><a href="{{ route('front.menu.show', ['uri' => 'partnerzy']) }}">Partnerzy</a></li>
+                                <li><a href="{{ route('front.menu.show', ['uri' => 'aktualnosci']) }}">Aktualności</a></li>
+                                <li><a href="{{ route('front.menu.show', ['uri' => 'blog']) }}">Blog</a></li>
+                                <li><a href="{{ route('front.menu.show', ['uri' => 'praca']) }}">Kariera</a></li>
+                            </ul>
+                        </li>
                         <li><a href="{{ route('front.menu.show', ['uri' => 'wykonczenie-mieszkan']) }}" class="dm-sans-500">Wykończenie mieszkań</a></li>
                         <li><a href="{{ route('front.menu.show', ['uri' => 'kontakt']) }}" class="dm-sans-500">Kontakt</a></li>
                         <li class="header-phone me-0"><a href="tel:+48512380000" class="dm-sans-500">+48 512 380 000</a></li>

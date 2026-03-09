@@ -43,38 +43,6 @@ Route::get('routes', function () {
 
     return '<pre>' . Artisan::output() . '</pre>';
 });
-//
-//Route::get('/email/verify/{id}/{hash}', function ($id, $hash) {
-//    // Pobierz użytkownika na podstawie ID z URL
-//    $user = User::find($id);
-//
-//    if (!$user) {
-//        throw new AuthorizationException('User not found');
-//    }
-//
-//    // Sprawdź, czy hash e-maila zgadza się z tym, który jest w URL
-//    if (!hash_equals(sha1($user->getEmailForVerification()), $hash)) {
-//        throw new AuthorizationException('Invalid verification link');
-//    }
-//
-//    // Jeśli hash pasuje, zweryfikuj e-mail użytkownika
-//    $user->markEmailAsVerified();
-//    $user->active = 1;
-//    $user->save();
-//
-//    // Przekieruj użytkownika na stronę logowania
-//    return redirect('/login')->with('verified', true);
-//})->middleware(['signed'])->name('verification.verify');
-//
-//Route::get('/email/verify', function () {
-//    return view('auth.verify-email');
-//})->name('verification.notice');
-//
-//Route::post('/email/verification-notification', function (Request $request) {
-//    $request->user()->sendEmailVerificationNotification();
-//    return back()->with('message', 'Wiadomość z link aktywacyjnym wysłana!');
-//})->middleware(['throttle:6,1'])->name('verification.send');
-//
 
 Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'front.'], function () {
 
@@ -85,15 +53,6 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 
     Route::get('/', 'IndexController@index')->name('index');
 
-    //Route::get('/articles/move', [ArticleController::class, 'move']);
-    //Route::get('/investment/move', [InvestmentController::class, 'move']);
-    //Route::get('/building/move', [BuildingController::class, 'move']);
-    //Route::get('/floor/move', [FloorController::class, 'move']);
-    //Route::get('/property/move', [PropertyController::class, 'move']);
-    //Route::get('/gallery/move', [GalleryController::class, 'move']);
-    //Route::get('/images/move', [ImageController::class, 'move']);
-    //Route::get('/plans/move', [InvestmentController::class, 'movePlans']);
-//
     Route::get('/dzialki', 'MenuController@dzialki')->name('dzialki');
     Route::get('/o-nas', 'MenuController@onas')->name('o-nas');
 

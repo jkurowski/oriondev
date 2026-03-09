@@ -667,16 +667,17 @@ header nav li span {
   color: #d8d8d8;
   font-size: 16px;
   text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  height: 100%;
+  align-items: center;
 }
 header nav li a:hover,
 header nav li span:hover {
   color: #FFF;
 }
-header nav li span {
-  cursor: pointer;
-  display: inline-flex;
-  gap: 8px;
-}
+header nav li a i,
 header nav li span i {
   font-size: 9px;
   color: #ff9500;
