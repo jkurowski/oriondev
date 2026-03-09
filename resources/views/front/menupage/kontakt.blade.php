@@ -30,7 +30,6 @@
                             <div>
                                 <p><a href="tel:+4851238000">+48 512-380-000</a></p>
                                 <p><a href="tel:+48512370000">+48 512-370-000</a></p>
-                                <p><a href="tel:+48512390000">+48 512-390-000</a></p>
                             </div>
                         </div>
                     </div>
@@ -52,13 +51,13 @@
                 <div class="col-12 text-center pt-5">
                     <h2>Biuro sprzedaży czynne:</h2>
                     <ul class="list-group col-4 m-auto mt-5">
-                        <li class="list-group-item">poniedziałek: <b>8:00 - 16:00</b></li>
-                        <li class="list-group-item">wtorek: <b>8:00 - 16:00</b></li>
+                        <li class="list-group-item">poniedziałek: <b>9.00 - 17:00</b></li>
+                        <li class="list-group-item">wtorek: <b>9.00 - 17:00</b></li>
                         <li class="list-group-item">środa: <b>8:00 - 16:00</b></li>
                         <li class="list-group-item">czwartek: <b>8:00 - 16:00</b></li>
                         <li class="list-group-item">piątek: <b>8:00 - 16:00</b></li>
-                        <li class="list-group-item text-danger">sobota: <b>zamkniete</b></li>
-                        <li class="list-group-item text-danger">niedziela: <b>zamkniete</b></li>
+                        <li class="list-group-item text-danger">sobota: <b>po wcześniejszym umówieniu</b></li>
+                        <li class="list-group-item text-danger">niedziela: <b>nieczynne</b></li>
                     </ul>
                 </div>
             </div>

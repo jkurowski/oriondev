@@ -24,7 +24,7 @@
                         <p>&nbsp;</p>
                         <p>Chętnie nawiążemy współpracę z osobami fizycznymi i prawnymi posiadające w swoim posiadaniu nieruchomości mogące nas zainteresować.</p>
                         <p>&nbsp;</p>
-                        <p>Oferty prosimy kierować telefonicznie tel. <a href="tel:+48512390000"><b>512-390-000</b></a> bądź na adres: <a href="mailto:oriondevelopment@o2.pl"><b>oriondevelopment@o2.pl</b></a></p>
+                        <p>Oferty prosimy kierować telefonicznie tel. <a href="tel:+48512370000"><b>512 370 000</b></a> bądź na adres: <a href="mailto:oriondevelopment@o2.pl"><b>oriondevelopment@o2.pl</b></a></p>
                     </div>
                 </div>
                 <div class="col-5 d-flex justify-content-end">
