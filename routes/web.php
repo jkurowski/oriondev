@@ -96,16 +96,7 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 //
     Route::get('/dzialki', 'MenuController@dzialki')->name('dzialki');
     Route::get('/o-nas', 'MenuController@onas')->name('o-nas');
-    Route::get('/o-nas', 'MenuController@onas')->name('o-nas');
 
-    Route::get('/strefa-klienta/', 'MenuController@strefa')->name('strefa');
-    Route::get('/strefa-klienta/do-kredytu/', 'MenuController@kredyt')->name('do-kredytu');
-    Route::get('/strefa-klienta/poradnik-mieszkanca/', 'MenuController@poradnik')->name('poradnik-mieszkanca');
-    Route::get('/strefa-klienta/odbior/', 'MenuController@odbior')->name('odbior');
-    Route::get('/strefa-klienta/podpisanie-aktu-notarialnego/', 'MenuController@akt')->name('akt');
-    Route::get('/strefa-klienta/media-w-mieszkaniu/', 'MenuController@media')->name('media');
-    Route::get('/strefa-klienta/finansowanie/', 'MenuController@finansowanie')->name('finansowanie');
-    Route::get('/strefa-klienta/wykonczenie-pod-klucz/', 'MenuController@wykonczenie')->name('wykonczenie');
 //
 //    Route::get('/kontakt', 'ContactController@index')->name('contact');
     Route::post('/kontakt/{property}', 'ContactController@property')->name('contact.property');
