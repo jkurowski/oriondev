@@ -19,7 +19,7 @@ class CompletedController extends Controller
     public function index()
     {
         $page = Page::find($this->pageId);
-        $investments = Investment::orderBy('date_end', 'desc')->whereStatus(2)->get();
+        $investments = Investment::orderBy('sort', 'asc')->whereStatus(2)->get();
 
         return view('front.developro.completed.index', [
             'page' => $page,
