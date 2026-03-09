@@ -660,14 +660,56 @@ header {
 }
 header nav li {
   margin-right: 50px;
+  position: relative;
 }
-header nav li a {
+header nav li a,
+header nav li span {
   color: #d8d8d8;
   font-size: 16px;
   text-transform: uppercase;
 }
-header nav li a:hover {
+header nav li a:hover,
+header nav li span:hover {
   color: #FFF;
+}
+header nav li span {
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+}
+header nav li span i {
+  font-size: 9px;
+  color: #ff9500;
+}
+header li {
+  padding: 10px 0;
+}
+header li ul {
+  background: white;
+  border-top: 4px solid #ff9500;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  display: none;
+}
+header li ul li {
+  border-bottom: 1px solid #0f4f80;
+  margin: 0;
+  padding: 0;
+}
+header li ul li a {
+  color: black;
+  font-size: 12px;
+  display: flex;
+  padding: 5px 18px;
+}
+header li ul li a:hover {
+  background: #0f4f80;
+  color: #FFF;
+}
+header li:hover ul {
+  display: block;
 }
 header #logo {
   margin: 25px 0;

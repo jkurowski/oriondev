@@ -11,7 +11,14 @@
                 <nav class="d-flex h-100 align-items-center justify-content-end">
                     <ul class="list-unstyled d-flex justify-content-end mb-0">
                         <li><a href="/" class="dm-sans-500">Witamy</a></li>
-                        <li><a href="" class="dm-sans-500">Inwestycje</a></li>
+                        <li>
+                            <span class="dm-sans-500">Inwestycje <i>▼</i></span>
+                            <ul class="mb-0 list-unstyled submenu">
+                                <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-aktualne']) }}">Inwestycje aktualne</a></li>
+                                <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-zrealizowane']) }}">Inwestycje zrealizowane</a></li>
+                                <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-planowane']) }}">Inwestycje planowane</a></li>
+                            </ul>
+                        </li>
                         <li><a href="{{ route('front.menu.show', ['uri' => 'relacje-inwestorskie']) }}" class="dm-sans-500">Relacje inwestorskie</a></li>
                         <li><a href="{{ route('front.menu.show', ['uri' => 'o-firmie']) }}" class="dm-sans-500">O firmie</a></li>
                         <li><a href="{{ route('front.menu.show', ['uri' => 'wykonczenie-mieszkan']) }}" class="dm-sans-500">Wykończenie mieszkań</a></li>
