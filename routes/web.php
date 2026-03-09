@@ -52,7 +52,6 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
     Route::post('/kontakt', 'ContactController@send')->name('contact.send');
 
     Route::get('/', 'IndexController@index')->name('index');
-
     Route::get('/dzialki', 'MenuController@dzialki')->name('dzialki');
     Route::get('/o-nas', 'MenuController@onas')->name('o-nas');
 
@@ -65,7 +64,7 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 //    Route::get('/schowek', 'Clipboard\IndexController@index')->name('clipboard.index');
 //    Route::delete('/clipboard', 'Clipboard\IndexController@destroy')->name('clipboard.destroy');
 
-    Route::resource('/o-firmie/aktualnosci', ArticleController::class)->only(['index', 'show']);
+    Route::resource('/aktualnosci', ArticleController::class)->only(['index', 'show']);
 
 //    Route::resources([
 //        '/aktualnosci' => 'ArticleController',
