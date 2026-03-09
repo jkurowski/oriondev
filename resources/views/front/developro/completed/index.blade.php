@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 @foreach($investments as $i)
-                    <div class="col-12 col-md-6 col-xl-4 mb-15 mb-sm-30 scroll-anim-bottom">
+                    <div class="col-12 col-md-6 col-xl-4 mb-4">
                         <div class="zrealizowane">
                             @if(1 == 2)
                                 <a href="{{ route('front.developro.completed.show', $i->slug) }}" class="zrealizowane__streched-link z-2"></a>
