@@ -22,7 +22,7 @@ class SectionService
         }
 
         $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('sections', $name, 'public_uploads');
+        $file->move(public_path('uploads/sections'), $name);
         $filepath = public_path('uploads/sections/' . $name);
 
         Image::make($filepath)

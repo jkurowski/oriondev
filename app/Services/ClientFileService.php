@@ -24,7 +24,7 @@ class ClientFileService
         $uploaded_file_name = pathinfo($uploaded_file,PATHINFO_FILENAME);
         $destination_file_name = date('His').'_'.Str::slug($uploaded_file_name).'.' . $file->getClientOriginalExtension();
 
-        $file->storeAs('user_files', $destination_file_name, 'public_uploads');
+        $file->move(public_path('uploads/user_files'), $destination_file_name);
 
         $client_file = ClientFile::create([
             'user_id' => auth()->id(),

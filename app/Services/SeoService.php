@@ -22,7 +22,7 @@ class SeoService
         }
 
         $name = 'favicon.' . $file->getClientOriginalExtension();
-        $file->storeAs('/', $name, 'public_uploads');
+        $file->move(public_path('uploads'), $name);
         $filepath = public_path('uploads/' . $name);
         Image::make($filepath)->fit(200, 200)->save($filepath);
 

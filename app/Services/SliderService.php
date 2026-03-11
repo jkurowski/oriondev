@@ -25,7 +25,7 @@ class SliderService
         }
 
         $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('slider', $name, 'public_uploads');
+        $file->move(public_path('uploads/slider'), $name);
 
         $filepath = public_path('uploads/slider/' . $name);
         $thumb_filepath = public_path('uploads/slider/thumbs/' . $name);

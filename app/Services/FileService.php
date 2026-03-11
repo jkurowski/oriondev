@@ -21,7 +21,7 @@ class FileService
         }
 
         $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('storage', $name, 'public_uploads');
+        $file->move(public_path('uploads/storage'), $name);
 
         $model->update([
             'file' => $name,

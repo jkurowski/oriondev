@@ -7,16 +7,15 @@
 
 @section('content')
     <!-- MAIN SECTION -->
-    <main class="overflow-hidden">
-        <!-- BREADCRUMB -->
-        <div class="container breadcrumb-section">
-            <div class="row">
-                <div class="col-12">
-                    <a href="/">Strona główna</a> / Inwestycje / {{ $investment->name }} / {{$property->name}}
-                </div>
+    <div class="container-fluid mieszkania-submenu">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>{{ $investment->name }} - {{$property->name}}</h1>
             </div>
         </div>
+    </div>
 
+    <div id="page">
         <!-- NAWIGACJA -->
         <div class="container next-prev">
             <div class="row">
@@ -43,15 +42,7 @@
 
         <!-- ENTRY -->
         <div class="container-fluid page-entry-karta px-0 position-relative">
-            <div class="page-entry-karta__decor">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="483.288" viewBox="0 0 29 483.288"><path id="single-slider-decor" d="M1919.5,1171.283h-29V770.4a213.737,213.737,0,0,0,9.558-19.68c3.258-7.556,6.474-15.887,9.3-24.092,5.148-14.956,8.75-28.674,10.144-38.628Z" transform="translate(-1890.5 -687.995)" fill="#5a5a5a"></path></svg>
-            </div>
             <div class="container ">
-                <div class="row">
-                    <div class="col-12 d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="text-uppercase text-center scroll-anim-top">{{$property->name}}</h1>
-                    </div>
-                </div>
                 <div class="row justify-content-center">
                     <div class="col-12 col-xl-10 col-xxl-8 d-flex flex-column flex-md-row align-items-center justify-content-center gap-30  gap-lg-100 mt-20 mt-lg-50 mt-xl-70 mb-30">
                         <div class="page-entry-karta__item d-flex flex-row align-items-center justify-content-center gap-15 scroll-anim-top">
@@ -262,49 +253,18 @@
                 @endif
             </div>
         </div>
+    </div>
 
-        <!-- KONTAKT -->
-        <div class="cotnainer-fluid mieszkanie-contact position-relative @if($similarProperties->count() > 0) px-0 @else pb-5 @endif">
+    <div class="pt-6">
+        @include('front.contact.form', [
+            'pageTitle' => $investment->name,
+            'investmentName' => $investment->name,
+            'investmentId' => $investment->id,
+            'emailAddress' => $investment->office_emails,
+            'back' => true
+        ])
+    </div>
 
-            <!-- FORM -->
-            @include('front.contact.clear-contact-form', [
-                'pageTitle' => $property->name,
-                'investmentName' => $investment->name,
-                'investmentId' => $investment->id,
-                'back' => true
-            ])
-
-        </div>
-
-        <!-- KARTA SLIDER-->
-        @if($similarProperties->count() > 0)
-        <div class="container-fluid position-relative karta-slider px-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-10 col-xl-8 col-xxl-6 offset-0 offset-lg-1 offset-xl-2 offset-xxl-3 d-flex align-items-center justify-content-center flex-column scroll-anim-top">
-                        @if($property->is_investment_property)
-                        <h2 class="mb-15 text-center  text-uppercase text-white">podobne apartamenty</br>w tej inwestycji</h2>
-                        @else
-                        <h2 class="mb-15 text-center  text-uppercase text-white">podobne mieszkania</br>w tej inwestycji</h2>
-                        @endif
-                        <p class="text-center text-white">
-                            @if($property->is_investment_property)
-                                Sprawdź inne apartamenty w tej inwestycji i wybierz ten, w którym poczujesz się naprawdę u siebie.
-                            @else
-                                Sprawdź inne mieszkania w tej inwestycji i wybierz to, w którym poczujesz się naprawdę u siebie.
-                            @endif
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="karta-slider__slider mt-15 mt-lg-15 mt-xl-15 scroll-anim-bottom">
-                @foreach($similarProperties as $p)
-                    <x-list-similar-property-card :property="$p" />
-                @endforeach
-            </div>
-        </div>
-        @endif
-    </main>
     <!-- END -> MAIN SECTION -->
     @if($property->priceHistory->count() > 0 && $property->status == 1 && $investment->show_pricehistory)
     <div class="modal fade" id="priceHistoryModal" tabindex="-1" aria-labelledby="priceHistoryModalLabel" aria-hidden="true">

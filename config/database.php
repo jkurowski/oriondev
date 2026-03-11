@@ -66,7 +66,7 @@ return [
         'old_triada' => [
             'driver' => 'mysql',
             'host' => env('DB_OLD_HOST', '127.0.0.1'),
-            'database' => env('DB_OLD_DATABASE', 'old_triada'),
+            'database' => env('DB_OLD_DATABASE', 'lar_orion'),
             'username' => env('DB_OLD_USERNAME', 'root'),
             'password' => env('DB_OLD_PASSWORD', ''),
             'charset' => 'utf8mb4',

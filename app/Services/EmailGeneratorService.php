@@ -22,7 +22,7 @@ class EmailGeneratorService
         }
 
         $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('email', $name, 'public_uploads');
+        $file->move(public_path('uploads/email'), $name);
         $filepath = public_path('uploads/email/' . $name);
 
         Image::make($filepath)->fit(600, 600)->save($filepath);

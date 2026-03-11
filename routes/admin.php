@@ -54,6 +54,7 @@ Route::group([
 //    Route::get('/developro/building/convert', 'Developro\Building\BuildingController@convert');
 //    Route::get('/developro/floor/convert', 'Developro\Floor\FloorController@convert');
 //    Route::get('/developro/floor/updateids', 'Developro\Floor\FloorController@updateids');
+    Route::get('/developro/floor/move', 'Developro\Floor\FloorController@move');
 //    Route::get('/developro/property/convert', 'Developro\Property\PropertyController@convert');
     Route::get('/developro/property/move', 'Developro\Property\PropertyController@move');
 //    Route::get('/developro/articles/convert', 'Developro\Article\IndexController@convert');

@@ -21,7 +21,7 @@ class CityService
         }
 
         $name = date('His').'_header-'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('header', $name, 'public_uploads');
+        $file->move(public_path('uploads/header'), $name);
 
         $filepath = public_path('uploads/header/' . $name);
         Image::make($filepath)

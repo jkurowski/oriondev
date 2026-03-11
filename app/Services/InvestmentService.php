@@ -45,7 +45,7 @@ class InvestmentService
         }
 
         $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('logo', $name, 'investment_uploads');
+        $file->move(public_path('investment/logo'), $name);
 
         $filepath = public_path('investment/logo/' . $name);
         Image::make($filepath)
@@ -68,7 +68,7 @@ class InvestmentService
         }
 
         $name = date('His') . '_' . Str::slug($model->name) . '.' . $file->getClientOriginalExtension();
-        $file->storeAs('plan', $name, 'investment_uploads');
+        $file->move(public_path('investment/plan'), $name);
 
         $filepath = public_path('investment/plan/' . $name);
         Image::make($filepath)->resize(

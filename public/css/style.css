@@ -949,6 +949,130 @@ header .header-phone a:hover {
 }
 /* Contact page
 ================================================== */
+.mieszkania-submenu {
+  background: #012c4c;
+  border-top: 1px solid #1c4d72;
+}
+.mieszkania-submenu h1 {
+  margin: 30px 0;
+}
+#page .sidemenu {
+  background: #003761;
+  border-radius: 7px;
+  padding: 0;
+}
+#page .sidemenu li {
+  border-bottom: 1px solid #1c4d72;
+}
+#page .sidemenu li a {
+  color: white;
+  display: flex;
+  font-size: 15px;
+  padding: 20px 20px;
+  border-radius: 7px;
+  line-height: 19px;
+}
+#page .sidemenu li a.active,
+#page .sidemenu li a.active:hover {
+  background: #002844;
+}
+#page .sidemenu li:last-child {
+  border-bottom: none;
+}
+#page .sidemenu li:hover a {
+  background: #002f50;
+}
+#page .page-search__wrapper {
+  margin-top: 10px;
+  background: #003761;
+  border-radius: 7px;
+  padding: 20px;
+}
+#page .page-search__wrapper h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 21px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #1c4d72;
+  padding-bottom: 20px;
+}
+#page .page-search__wrapper label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: white;
+}
+#page .mieszkania-page-title {
+  background: white;
+  border: 1px solid #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-right: -1px;
+}
+.mieszkania-list-flex {
+  background: white;
+  border: 1px solid #f1f1f1;
+  padding: 20px;
+  margin: 12px 0;
+}
+.mieszkania-list-flex h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 23px;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+}
+.mieszkania-list-btn {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.mieszkania-list-btn a {
+  background: #003761;
+  border-radius: 30px;
+  color: white !important;
+  padding: 7px 30px;
+}
+.mieszkania-list-btn .list-status {
+  font-weight: 600;
+  text-align: center;
+  margin-left: auto;
+  font-size: 21px;
+}
+.mieszkania-list-btn .list-status-1 {
+  color: green;
+}
+.mieszkania-list-btn .list-status-2 {
+  color: orange;
+}
+.mieszkania-list-btn .list-status-3 {
+  color: red;
+}
+.mieszkania-list-icn {
+  width: 100%;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.mieszkania-list-icn .mieszkania-list-icn-item {
+  width: 33.3333%;
+  display: inline-grid;
+  justify-content: center;
+  font-size: 12px;
+}
+.mieszkania-list-icn .mieszkania-list-icn-item svg {
+  width: 19px;
+  height: 19px;
+  margin: 0 auto 10px;
+  fill: #ff9500;
+}
+/* Contact page
+================================================== */
 .contact-box {
   background: #003761;
   padding: 160px 30px 30px;

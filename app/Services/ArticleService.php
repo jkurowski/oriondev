@@ -55,7 +55,7 @@ class ArticleService
         }
 
         $name = date('His') . '_' . Str::slug($title) . '.' . $file->getClientOriginalExtension();
-        $file->storeAs('articles/share', $name, 'public_uploads');
+        $file->move(public_path('uploads/articles/share'), $name);
         $filepath = public_path('uploads/articles/share/' . $name);
 
         $image = Image::make($filepath);

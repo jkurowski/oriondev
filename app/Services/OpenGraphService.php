@@ -10,7 +10,7 @@ class OpenGraphService
     public function upload(UploadedFile $file)
     {
         $name = 'website_share.' . $file->getClientOriginalExtension();
-        $file->storeAs('share', $name, 'public_uploads');
+        $file->move(public_path('uploads/share'), $name);
         $filepath = public_path('uploads/share/' . $name);
         Image::make($filepath)->fit(600, 314)->save($filepath);
     }

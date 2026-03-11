@@ -184,7 +184,6 @@ class FloorController extends Controller
                 'updated_at' => now(),
             ]);
         }
-
         return 'Migration completed!';
     }
 }

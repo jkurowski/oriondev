@@ -354,7 +354,7 @@ class PropertyController extends Controller
         // Get all old news records
         $oldProperties = DB::connection('old_triada')
             ->table('inwestycje_powierzchnia')
-            ->where('id_inwest', 59)
+            ->where('id_inwest', 9)
             ->get();
 
         foreach ($oldProperties as $b) {
@@ -376,12 +376,10 @@ class PropertyController extends Controller
                 'rooms' => $b->pokoje ?? 0,
                 'meta_title' => $b->meta_tytul,
                 'meta_description' => $b->meta_opis,
-                'loggia_area' => $b->balkon,
-                'terrace_area' => $b->tarasik,
-                'garden_area' => $b->taras,
+                'balcony_area' => $b->balkon,
+                'garden_area' => $b->ogrodek,
                 'text' => $b->tekst,
                 'highlighted' => $b->promocja,
-                'for_investor' => $b->apartament,
                 'commercial' => $b->uslugowy ?? 0,
                 'kitchen' => $b->kuchnia ?? 0,
                 'window' => $b->okno,

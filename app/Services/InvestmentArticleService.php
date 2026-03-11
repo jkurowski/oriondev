@@ -32,7 +32,7 @@ class InvestmentArticleService
         $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
         $name_webp = date('His').'_'.Str::slug($title).'.webp';
 
-        $file->storeAs('articles', $name, 'investment_uploads');
+        $file->move(public_path('investment/articles'), $name);
 
         $file_path = public_path('investment/articles/' . $name);
         $file_thumb_path = public_path('investment/articles/thumbs/' . $name);

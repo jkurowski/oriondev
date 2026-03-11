@@ -52,7 +52,7 @@ class Inline extends Model
         }
 
         $filename = Str::slug($name) . '_' . Str::random(3) . '.' .$uploadfile->getClientOriginalExtension();
-        $uploadfile->storeAs('inline', $filename, 'public_uploads');
+        $uploadfile->move(public_path('uploads/inline'), $filename);
 
 //        $filepath = public_path('uploads/inline/' . $filename);
 //        Image::make($filepath)->fit($width, $height)->save($filepath);

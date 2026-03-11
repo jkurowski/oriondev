@@ -18,7 +18,7 @@ class OfferService
         $uploaded_file_name = pathinfo($uploaded_file,PATHINFO_FILENAME);
         $destination_file_name = date('His').'_'.Str::slug($uploaded_file_name).'.' . $file->getClientOriginalExtension();
 
-        $file->storeAs('offer', $destination_file_name, 'public_uploads');
+        $file->move(public_path('uploads/offer'), $destination_file_name);
 
         $fileInfo = [
             'id' => md5($destination_file_name),

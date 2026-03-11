@@ -9,14 +9,6 @@
 @section('content')
     <!-- MAIN SECTION -->
     <main class="overflow-hidden">
-        <!-- BREADCRUMB -->
-        <div class="container breadcrumb-section">
-            <div class="row">
-                <div class="col-12">
-                    <a href="/">Strona główna</a> / <a href="{{ route('front.developro.current') }}">Mieszkania</a> / {{ $investment->name }}
-                </div>
-            </div>
-        </div>
 
         @include('front.developro.investment_shared.menu', ['static_page' => $static_page])
 
@@ -193,36 +185,6 @@
             </div>
         </div>
         @endif
-
-        <div class="container-flud cta px-0 position-relative">
-            <div class="contact-form__decor">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1043.203" height="31" viewBox="0 0 1043.203 31">
-                    <path id="contact-form-decor-01" d="M.5,1532.5v-31H1043.7a200.41,200.41,0,0,1-18.655,10.048c-7.312,3.506-15.37,6.965-23.3,10-14.646,5.607-28.024,9.489-37.6,10.949Z" transform="translate(-0.5 -1501.5)" fill="#fff"/>
-                </svg>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-xxl-10 offset-0 offset-xxl-1">
-                        <svg width="0" height="0" style="position:absolute;">
-                            <defs>
-                                <clipPath id="cta-01" clipPathUnits="objectBoundingBox">
-                                    <path d="M0.6,0.999H0V0.543C0.001,0.537,0.007,0.523,0.012,0.516V0.017H0.204C0.218,0.011,0.226,0.007,0.229,0.001H1V0.456c-0.001,0.006-0.007,0.02-0.012,0.027V0.983H0.619C0.613,0.987,0.605,0.993,0.6,0.999Z"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <div class="cta__wrapper d-flex flex-row align-items-center justify-content-center">
-                            <div class="cta__left d-flex flex-column align-items-start justify-content-center">
-                                <h2 class="mb-15 text-start text-uppercase">Umów się</br>na spotkanie</h2>
-                                {!! parse_text($investment->contact_content) !!}
-                            </div>
-                            <div class="cta__right d-none d-lg-flex">
-                                <img class="cta__img" src="{{ asset('/img/temp/cta-person.png') }}" width="489" height="564" alt="Zdjęcie w tle">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         @if($investment->location_content)
             <div class="container-fluid lokalizacja"  data-map="true">

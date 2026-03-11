@@ -22,7 +22,7 @@ class GalleryService
         $slug = Str::slug($title);
         $name = date('His') . '_' . $slug . '.' . $file->getClientOriginalExtension();
 
-        $file->storeAs('gallery', $name, 'public_uploads');
+        $file->move(public_path('uploads/gallery'), $name);
         $filepath = public_path('uploads/gallery/' . $name);
 
         $image = Image::make($file->getRealPath());

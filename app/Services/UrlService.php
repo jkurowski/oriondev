@@ -19,7 +19,7 @@ class UrlService
         }
 
         $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('headers', $name, 'public_uploads');
+        $file->move(public_path('uploads/headers'), $name);
 
         $filepath = public_path('uploads/headers/' . $name);
         Image::make($filepath)

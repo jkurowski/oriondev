@@ -23,7 +23,7 @@ class IssueService
         $uploaded_file_name = pathinfo($uploaded_file,PATHINFO_FILENAME);
         $destination_file_name = date('His').'_'.Str::slug($uploaded_file_name).'.' . $file->getClientOriginalExtension();
 
-        $file->storeAs('issue_files', $destination_file_name, 'public_uploads');
+        $file->move(public_path('uploads/issue_files'), $destination_file_name);
 
         $issue_file = IssueFile::create([
             'user_id' => auth()->id(),

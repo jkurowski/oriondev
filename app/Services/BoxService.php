@@ -22,7 +22,7 @@ class BoxService
         }
 
         $name = date('His').'_'.Str::slug($title).'.' . $file->getClientOriginalExtension();
-        $file->storeAs('boxes', $name, 'public_uploads');
+        $file->move(public_path('uploads/boxes'), $name);
         $filepath = public_path('uploads/boxes/' . $name);
 
         Image::make($filepath)
