@@ -23,8 +23,32 @@
                     </div>
                 </div>
                 <div class="col-10">
+                    <div class="container mb-3">
+                        <div id="planNav" class="row">
+                            <div class="col-6 col-sm-4">
+                                @if($prev_floor)
+                                    <a href="{{route('front.developro.building.floor', [$investment->slug, $building, $prev_floor, 'floorSlug' => Str::slug($prev_floor->name)])}}" class="custom-button z-2">
+                                        Piętro niżej
+                                    </a>
+                                @endif
+                            </div>
+
+                            <div class="col-12 col-sm-4 text-center order-first order-sm-0">
+                                <a href="{{route('front.developro.building', [$investment->slug, $building])}}" class="custom-button z-2" style="--bs-btn-hover-color: var(--bs-white);">Plan budunku</a>
+                            </div>
+
+                            <div class="col-6 col-sm-4 text-end">
+                                @if($next_floor)
+                                    <a href="{{route('front.developro.building.floor', [$investment->slug, $building, $next_floor, 'floorSlug' => Str::slug($next_floor->name)])}}" class="custom-button z-2">
+                                        Piętro wyżej
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+
                     @if($floor->file)
-                        <div id="plan-holder">
+                        <div id="plan-holder" class="p-2">
                             <img src="{{ asset('/investment/floor/'.$floor->file) }}" alt="{{$floor->name}}" id="invesmentplan" usemap="#invesmentplan" class="w-100 h-100 object-fit-cover rounded">
                             <map name="invesmentplan">
                                 @if($properties)

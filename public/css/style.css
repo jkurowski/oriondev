@@ -1071,6 +1071,13 @@ header .header-phone a:hover {
   margin: 0 auto 10px;
   fill: #ff9500;
 }
+#page #planNav a {
+  background: #003761;
+  border-radius: 4px;
+  color: white !important;
+  padding: 12px 40px;
+  display: inline-flex;
+}
 /* Contact page
 ================================================== */
 .contact-box {
