@@ -49,7 +49,19 @@
 
                     @if($floor->file)
                         <div id="plan-holder" class="p-2">
-                            <img src="{{ asset('/investment/floor/'.$floor->file) }}" alt="{{$floor->name}}" id="invesmentplan" usemap="#invesmentplan" class="w-100 h-100 object-fit-cover rounded">
+                            <picture>
+                                @if($floor->file_webp)
+                                    <source srcset="{{ asset('/investment/floor/webp/'.$floor->file_webp) }}" type="image/webp">
+                                @endif
+
+                                <img
+                                    src="{{ asset('/investment/floor/'.$floor->file) }}"
+                                    alt="{{ $floor->name }}"
+                                    id="invesmentplan"
+                                    usemap="#invesmentplan"
+                                    class="w-100 h-100 object-fit-cover rounded"
+                                >
+                            </picture>
                             <map name="invesmentplan">
                                 @if($properties)
                                     @foreach($properties as $r)
