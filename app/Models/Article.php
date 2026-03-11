@@ -24,6 +24,7 @@ class Article extends Model
         'meta_description',
         'meta_robots',
         'status',
+        'type',
         'sort',
         'posted_at'
     ];

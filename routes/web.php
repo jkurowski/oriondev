@@ -46,6 +46,15 @@ Route::get('routes', function () {
 
 Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'front.'], function () {
 
+
+    Route::get('/{type}', [ArticleController::class, 'index'])
+        ->where('type', 'aktualnosci|blog')
+        ->name('aktualnosci.index');
+
+    Route::get('/{type}/{slug}', [ArticleController::class, 'show'])
+        ->where('type', 'aktualnosci|blog')
+        ->name('aktualnosci.show');
+
     //Cron
     Route::get('/cron/{id}', 'Cron\IndexController@updateVOX')->name('cron.vox');
 
@@ -63,8 +72,6 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 //    Route::post('/clipboard/send', 'Clipboard\IndexController@send')->name('clipboard.send');
 //    Route::get('/schowek', 'Clipboard\IndexController@index')->name('clipboard.index');
 //    Route::delete('/clipboard', 'Clipboard\IndexController@destroy')->name('clipboard.destroy');
-
-    Route::resource('/aktualnosci', ArticleController::class)->only(['index', 'show']);
 
 //    Route::resources([
 //        '/aktualnosci' => 'ArticleController',

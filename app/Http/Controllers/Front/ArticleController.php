@@ -14,20 +14,54 @@ use App\Models\Page;
 class ArticleController extends Controller
 {
 
-    public function index()
+    public function index($type)
     {
-        $page = Page::whereId(2)->first();
-        $articles = Article::where('status', 1)->orderBy('posted_at', 'DESC')->get();
-        return view('front.article.index', ['page' => $page, 'articles' => $articles]);
+        $config = [
+            'aktualnosci' => [
+                'type' => 1,
+                'view' => 'front.article.index',
+                'page' => 2
+            ],
+            'blog' => [
+                'type' => 2,
+                'view' => 'front.blog.index',
+                'page' => 3
+            ]
+        ];
+
+        $data = $config[$type];
+
+        $page = Page::find($data['page']);
+
+        $articles = Article::where('status', 1)
+            ->where('type', $data['type'])
+            ->orderByDesc('posted_at')
+            ->get();
+
+        return view($data['view'], compact('page', 'articles'));
     }
 
-    public function show($slug)
+    public function show($type, $slug)
     {
 
-        $article = Article::where('slug', $slug)->first();
+        $config = [
+            'aktualnosci' => [
+                'type' => 1,
+                'page' => 2
+            ],
+            'blog' => [
+                'type' => 2,
+                'page' => 3
+            ]
+        ];
+
+        $data = $config[$type];
+
+        $article = Article::where('slug', $slug)->where('type', $data['type'])->first();
 
         $previousArticles = Article::where('posted_at', '<', $article->posted_at)
             ->where('status', 1)
+            ->where('type', $data['type'])
             ->orderBy('posted_at', 'desc')
             ->take(2)
             ->get();
@@ -59,7 +93,7 @@ class ArticleController extends Controller
             'page' => $page,
             'article' => $article,
             'previousArticles' => $previousArticles,
-            //'schema' => $schemaBlog,
+            'type' => $type,
             //'opengraph' => $og
         ]);
     }

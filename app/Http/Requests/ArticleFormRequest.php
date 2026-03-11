@@ -29,6 +29,7 @@ class ArticleFormRequest extends FormRequest
             'content_entry' => 'required|string|min:5',
             'content' => 'required|string|min:5',
             'posted_at' => 'nullable|date|date_format:Y-m-d',
+            'type' => 'required|integer',
             'status' => 'boolean',
             'file_alt' => '',
             'meta_title' => '',

@@ -36,6 +36,9 @@
                                     <div class="row w-100 form-group">
                                         @include('form-elements.html-select', ['label' => 'Status', 'name' => 'status', 'selected' => $entry->status, 'select' => ['1' => 'Pokaż na liście', '0' => 'Ukryj na liście']])
                                     </div>
+                                    <div class="row w-100 form-group">
+                                        @include('form-elements.html-select', ['label' => 'Typ', 'name' => 'type', 'selected' => $entry->type, 'select' => ['1' => 'Aktualność', '2' => 'Wpis do bloga']])
+                                    </div>
                                 @endif
                                 <div class="row w-100 form-group">
                                     @include('form-elements.html-input-text', ['label' => 'Tytuł wpisu', 'name' => 'title', 'value' => $entry->title, 'required' => 1])

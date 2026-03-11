@@ -23,7 +23,7 @@
                 @foreach($articles as $article)
                     <div class="col-12 col-md-6">
                         <article class="position-relative">
-                            <a href="{{ route('front.aktualnosci.show', $article->slug) }}">
+                            <a href="{{ route('front.aktualnosci.show', ['aktualnosci', $article->slug]) }}">
 
                                 <div class="d-flex flex-row align-items-center justify-content-start gap-1 article-date">
                                     <svg width="19px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@
   "item":{
     "@type":"Article",
     "headline":"{{ $article->title }}",
-    "url":"{{ route('front.aktualnosci.show',$article->slug) }}",
+    "url":"{{ route('front.aktualnosci.show', ['aktualnosci', $article->slug]) }}",
     "image":"{{ asset('uploads/articles/thumbs/'.$article->file) }}",
     "datePublished":"{{ $article->posted_at }}"
   }
