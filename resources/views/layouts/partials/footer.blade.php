@@ -39,7 +39,7 @@
                 <ul class="mb-0 list-unstyled footer-menu">
                     <li><a href="{{ route('front.menu.show', ['uri' => 'o-firmie']) }}">O firmie</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'polityka-prywatnosci']) }}">Polityka prywatności</a></li>
-                    <li><a href="#">Nota prawna</a></li>
+                    <li class="d-none"><a href="#">Nota prawna</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'aktualnosci']) }}">Aktualności</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'blog']) }}">Blog</a></li>
                 </ul>
