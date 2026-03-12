@@ -1563,6 +1563,8 @@ footer #copyrights span {
   }
   #contactForm img {
     margin-bottom: -48px;
+    position: relative;
+    bottom: -95px;
   }
   .iconbox h3 {
     font-size: 22px;
@@ -1621,6 +1623,20 @@ footer #copyrights span {
   .footer-company img {
     margin: 0 auto;
   }
+  article {
+    padding: 20px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  article .arrow {
+    width: 60px;
+    height: 60px;
+  }
+  .single-article h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
 }
 /* end of 991.98 */
 @media (max-width: 767.98px) {
@@ -1662,6 +1678,11 @@ footer #copyrights span {
   footer #copyrights p {
     line-height: normal;
     font-size: 10px;
+  }
+  .col-md-6:nth-child(2n+1) article {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 30px !important;
   }
 }
 /* end of 767.98 */

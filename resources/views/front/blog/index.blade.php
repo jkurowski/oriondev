@@ -6,23 +6,20 @@
 @section('seo_robots', $page->meta_robots ?? '')
 
 @section('content')
+    <div class="container-fluid mieszkania-submenu">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Blog</h1>
+            </div>
+        </div>
+    </div>
+
     <div id="page">
         <div class="container">
-            <div class="row section-header">
-                <div class="col-12 text-center">
-                        <span class="section-header-subtitle dm-sans-400">
-                            <i class="subtitle-left"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M0.527588 0V9.49634H8.96878" stroke="#FF9500" stroke-width="1"/></svg></i>
-                            <i class="subtitle-right"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M8.44116 10.0239L8.44116 0.527584L-3.06411e-05 0.527583" stroke="#FF9500" stroke-width="1"/></svg></i>
-                            SUBTYTUŁ
-                        </span>
-                    <h2>BLOG</h2>
-                </div>
-            </div>
-
-            <section class="row pt-5 blog" aria-label="Blog">
+            <section class="row blog" aria-label="Blog">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-8">
+                        <div class="col-12 col-lg-8">
                             <div class="row">
                                 @foreach($articles as $article)
                                     <div class="col-12">

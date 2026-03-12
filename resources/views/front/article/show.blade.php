@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="container pt-6 pb-6">
+    <div class="container pt-6 pb-6 section-mobile">
         <section class="row blog blog-blue" aria-label="Aktualności">
             @foreach($previousArticles as $article)
                 <div class="col-12 col-md-6">
