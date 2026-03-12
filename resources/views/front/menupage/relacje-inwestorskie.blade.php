@@ -58,7 +58,7 @@
             </div>
         </div>
     </section>
-    <div class="pt-6">
+    <div class="pt-5 pt-xxl-6 pb-5 pb-xxl-0">
         @include('front.contact.form', ['page_name' => 'Praca'])
     </div>
     <!-- END -> MAIN SECTION -->
