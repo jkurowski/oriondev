@@ -6,12 +6,20 @@
 @section('seo_robots', $page->meta_robots ?? '')
 
 @section('content')
+    <div class="container-fluid mieszkania-submenu">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Relacje inwestorskie</h1>
+            </div>
+        </div>
+    </div>
+
     <!-- MAIN SECTION -->
     <div id="page">
         <div class="container">
-            <div class="row pb-5">
-                <div class="col-7">
-                    <div class="pe-5">
+            <div class="row pb-0 pb-sm-5">
+                <div class="col-12 col-lg-7 d-flex align-items-center">
+                    <div class="pe-0 pe-lg-5">
                         <div class="section-header">
                             <span class="section-header-subtitle dm-sans-400">
                                 <i class="subtitle-left"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M0.527588 0V9.49634H8.96878" stroke="#FF9500" stroke-width="1"/></svg></i>
@@ -27,7 +35,7 @@
                         <p>Oferty prosimy kierować telefonicznie tel. <a href="tel:+48512370000"><b>512 370 000</b></a> bądź na adres: <a href="mailto:oriondevelopment@o2.pl"><b>oriondevelopment@o2.pl</b></a></p>
                     </div>
                 </div>
-                <div class="col-5 d-flex justify-content-end">
+                <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-end align-items-center mt-5 mt-lg-0">
                     <img src="{{ asset('images/kariera.webp') }}" alt="" class="img-rounded">
                 </div>
             </div>
@@ -37,22 +45,22 @@
     <section id="numbers" class="pb-6">
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-lg-4 d-flex justify-content-start justify-content-sm-center justify-content-lg-start">
                     <div class="numerbox">
                         <span>29+</span>
-                        <p class="ps-4">lat <br>doświadczenia</p>
+                        <p class="ps-3 ps-xl-4">lat <br>doświadczenia</p>
                     </div>
                 </div>
-                <div class="col-4 d-flex justify-content-center">
+                <div class="col-12 col-lg-4 d-flex justify-content-start justify-content-sm-center mt-4 mt-lg-0">
                     <div class="numerbox">
-                        <span>6</span>
-                        <p class="ps-4">zrealizowanych <br>inwestycji</p>
+                        <span>10</span>
+                        <p class="ps-3 ps-xl-4">zrealizowanych <br>inwestycji</p>
                     </div>
                 </div>
-                <div class="col-4 d-flex justify-content-end">
+                <div class="col-12 col-lg-4 d-flex justify-content-start justify-content-sm-center justify-content-lg-end mt-4 mt-lg-0">
                     <div class="numerbox">
                         <span>765</span>
-                        <p class="ps-4">sprzedanych <br>mieszkań</p>
+                        <p class="ps-3 ps-xl-4">sprzedanych <br>mieszkań</p>
                     </div>
                 </div>
             </div>
