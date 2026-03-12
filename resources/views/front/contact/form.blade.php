@@ -21,7 +21,7 @@
                     <h2 class="big">Napisz do nas!</h2>
                 </div>
 
-                <form action="{{ route('front.contact.send') }}" class="row mt-5 validateForm" method="POST">
+                <form action="{{ route('front.contact.send') }}" class="row mt-3 mt-xxl-5 validateForm" method="POST">
                     {{ csrf_field() }}
                     <div class="col-12">
                         @if (session('success'))

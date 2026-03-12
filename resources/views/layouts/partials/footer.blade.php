@@ -1,7 +1,7 @@
 <!-- FOOTER -->
-<footer class="pt-6">
+<footer class="pt-5 pt-xxl-6">
     <div class="container">
-        <div class="row border-bottom pb-6">
+        <div class="row border-bottom pb-5 pb-xxl-6">
             <div class="col-6 d-flex align-items-center">
                 <h4 class="mb-0">Masz pytania? <br>Skontaktuj się z nami!</h4>
             </div>
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <div id="copyrights" class="mt-6">
+    <div id="copyrights" class="mt-5 mt-xxl-6">
         <div class="container">
             <div class="col-12 text-center py-4 text-white">
                 <p>Orion Development. Wszelkie prawa zastrzeżone. <span>|</span> Projekt: 4DL.pl / DeveloPro</p>

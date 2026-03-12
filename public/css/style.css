@@ -1484,6 +1484,31 @@ footer #copyrights span {
     width: 150px;
     height: 76px;
   }
+  #page p,
+  #page li,
+  p,
+  li {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .contact-box {
+    padding: 145px 30px 15px;
+  }
+  footer h4 {
+    font-size: 47px;
+    line-height: 62px;
+  }
+  footer .footer-contact li {
+    line-height: 51px;
+    font-size: 33px;
+  }
+  .section-header h2.big {
+    font-size: 53px;
+    line-height: 68px;
+  }
+  article h3 {
+    font-size: 23px;
+  }
 }
 /* end of 1640 */
 /* end of 1479.98 */
@@ -1522,6 +1547,22 @@ footer #copyrights span {
   }
   #page {
     padding: 50px 0;
+  }
+  .section-header h2.big {
+    font-size: 39px;
+    line-height: 50px;
+    margin: 10px 0 15px;
+  }
+  .section-header .section-header-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 2px 12px;
+  }
+  #contactForm textarea.form-control {
+    height: 140px;
+  }
+  #contactForm img {
+    margin-bottom: -48px;
   }
 }
 /* end of 1359.98 */
