@@ -1470,4 +1470,66 @@ footer #copyrights span {
     display: inline-flex;
   }
 }
+@media (max-width: 1619.98px) {
+  header {
+    height: 126px;
+  }
+  header .header-phone a {
+    padding: 15px 25px;
+  }
+  header nav li {
+    margin-right: 23px;
+  }
+  header #logo img {
+    width: 150px;
+    height: 76px;
+  }
+}
+/* end of 1640 */
+/* end of 1479.98 */
+@media (max-width: 1399.98px) {
+  header {
+    height: 68px;
+  }
+  header .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  header .row {
+    margin: 0;
+  }
+  header nav li {
+    margin-right: 22px;
+  }
+  header nav li a,
+  header nav li span {
+    font-size: 14px;
+  }
+  header .header-phone a {
+    padding: 11px 20px;
+    font-size: 14px;
+  }
+  header #logo {
+    margin: 10px 0;
+  }
+  header #logo img {
+    width: 100px;
+    height: auto;
+  }
+  .mieszkania-submenu h1 {
+    margin: 20px 0;
+    font-size: 23px;
+  }
+  #page {
+    padding: 50px 0;
+  }
+}
+/* end of 1359.98 */
+/* end of 1199.98 */
+/* end of 1199.98 */
+/* end of 991.98 */
+/* end of 767.98 */
+/* end of 575.98 */
+/* end of 359.98 */
+/* end of 359.98 */
 /*# sourceMappingURL=style.css.map */

@@ -27,17 +27,19 @@
                 <h5>MENU</h5>
                 <ul class="mb-0 list-unstyled footer-menu">
                     <li><a href="/">Strona główna</a></li>
-                    <li><a href="">Inwestycje</a></li>
+                    <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-aktualne']) }}">Inwestycje aktualne</a></li>
+                    <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-planowane']) }}">Inwestycje planowane</a></li>
+                    <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-zrealizowane']) }}">Inwestycje zrealizowane</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'relacje-inwestorskie']) }}">Relacje inwestorskie</a></li>
-                    <li><a href="{{ route('front.menu.show', ['uri' => 'o-firmie']) }}">O firmie</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'kontakt']) }}">Kontakt</a></li>
                 </ul>
             </div>
             <div class="col-2">
                 <h5>INFORMACJE</h5>
                 <ul class="mb-0 list-unstyled footer-menu">
+                    <li><a href="{{ route('front.menu.show', ['uri' => 'o-firmie']) }}">O firmie</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'polityka-prywatnosci']) }}">Polityka prywatności</a></li>
-                    <li><a href="">Nota prawna</a></li>
+                    <li><a href="#">Nota prawna</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'aktualnosci']) }}">Aktualności</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'blog']) }}">Blog</a></li>
                 </ul>
