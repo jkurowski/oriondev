@@ -1,17 +1,25 @@
 @extends('layouts.page', ['body_class' => 'position-relative', 'body_id' => 'page-praca'])
 
-@section('meta_title', $page->title ?? 'Praca')
+@section('meta_title', $page->title ?? 'Kariera')
 @section('seo_title',$page->meta_title ?? '')
 @section('seo_description', $page->meta_description ?? '')
 @section('seo_robots', $page->meta_robots ?? '')
 
 @section('content')
+    <div class="container-fluid mieszkania-submenu">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Kariera</h1>
+            </div>
+        </div>
+    </div>
+
     <!-- MAIN SECTION -->
     <div id="page">
         <div class="container">
-            <div class="row pb-5">
-                <div class="col-7">
-                    <div class="pe-5">
+            <div class="row pb-0 pb-lg-5">
+                <div class="col-12 col-lg-7 d-flex align-items-center">
+                    <div class="pe-0 pe-lg-5">
                         <div class="section-header">
                             <span class="section-header-subtitle dm-sans-400">
                                 <i class="subtitle-left"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M0.527588 0V9.49634H8.96878" stroke="#FF9500" stroke-width="1"/></svg></i>
@@ -25,11 +33,12 @@
                         <p>Naszą siłą jest różnorodność naszych wspólnych doświadczeń, kreatywność w rozwiązywaniu problemów i wzajemna pomoc zwłaszcza osobom nowozatrudnionym.</p>
                     </div>
                 </div>
-                <div class="col-5 d-flex justify-content-end">
+                <div class="d-none d-lg-block col-lg-5 d-flex justify-content-center justify-content-lg-end align-items-center mt-5 mt-lg-0">
                     <img src="{{ asset('images/kariera.webp') }}" alt="" class="img-rounded">
                 </div>
             </div>
-            <div class="row mt-5">
+
+            <div class="row mt-3 mt-lg-5">
                 <div class="col-12">
                     <div class="carrer-item">
                         <h2>Inżynier Budowy / Kierownik Robót / Kierownik Budowy</h2>

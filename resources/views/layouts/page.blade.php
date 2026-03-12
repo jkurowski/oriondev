@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=12032026d" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=12032026e" />
 
     <!-- Preloads -->
     <link rel="preload" href="{{ asset('images/logo-white-png.png') }}" as="image" />

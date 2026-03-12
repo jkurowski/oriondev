@@ -1637,6 +1637,10 @@ footer #copyrights span {
     font-size: 28px;
     margin-bottom: 20px;
   }
+  .carrer-item {
+    padding: 20px;
+    margin-right: 0;
+  }
 }
 /* end of 991.98 */
 @media (max-width: 767.98px) {
