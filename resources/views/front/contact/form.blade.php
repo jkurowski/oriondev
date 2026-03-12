@@ -6,12 +6,12 @@
 <section id="contactForm">
     <div class="container">
         <div class="row">
-            <div class="col-6 d-flex align-items-end justify-content-center">
+            <div class="col-6 d-flex align-items-end justify-content-center d-none d-xl-block">
                 <div class="image-container">
                     <img src="{{ asset('images/contact-woman.png')}}" alt="">
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <div class="section-header">
                             <span class="section-header-subtitle dm-sans-400">
                                 <i class="subtitle-left"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M0.527588 0V9.49634H8.96878" stroke="#FF9500" stroke-width="1"/></svg></i>
@@ -46,7 +46,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 col-xxl-4">
+                    <div class="col-12 col-sm-6 col-xxl-4">
                         <div class="form-floating mb-3">
                             <input type="tel" class="form-control @error('form_phone') is-invalid @enderror" id="floatingPhone" placeholder="Numer telefonu" name="form_phone" value="{{ old('form_phone') }}">
                             <label for="floatingPhone">Numer telefonu</label>
@@ -56,7 +56,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 col-xxl-4">
+                    <div class="col-12 col-sm-6 col-xxl-4">
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control @error('form_email') is-invalid @enderror" id="floatingEmail" placeholder="E-mail" name="form_email" value="{{ old('form_email') }}">
                             <label for="floatingEmail">E-mail</label>

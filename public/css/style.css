@@ -1567,9 +1567,101 @@ footer #copyrights span {
 }
 /* end of 1359.98 */
 /* end of 1199.98 */
+@media (max-width: 1199.98px) {
+  footer h4 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  footer .footer-contact li {
+    line-height: 39px;
+    font-size: 24px;
+  }
+}
 /* end of 1199.98 */
+@media (max-width: 991.98px) {
+  footer .footer-contact li {
+    line-height: 32px;
+    font-size: 21px;
+  }
+  footer h4 {
+    font-size: 27px;
+    line-height: 36px;
+  }
+  .footer-company {
+    text-align: center;
+  }
+  .footer-company img {
+    margin: 0 auto;
+  }
+}
 /* end of 991.98 */
+@media (max-width: 767.98px) {
+  .contact-box {
+    padding: 75px 30px 15px;
+  }
+  .contact-box svg {
+    width: 120px;
+    height: 120px;
+    left: -60px;
+    top: -40px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .pt-5.pt-xxl-6.pb-5.pb-xxl-0 {
+    padding: 30px 18px !important;
+  }
+  footer .footer-contact li {
+    line-height: 29px;
+    font-size: 16px;
+  }
+  footer h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  footer .footer-menu li,
+  footer .footer-menu p {
+    line-height: 16px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  footer h5 {
+    font-size: 17px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+  }
+  footer #copyrights p {
+    line-height: normal;
+    font-size: 10px;
+  }
+}
 /* end of 767.98 */
+@media (max-width: 575.98px) {
+  footer {
+    text-align: center;
+  }
+  footer p {
+    line-height: 18px;
+    font-size: 14px;
+  }
+  #page {
+    padding: 30px 18px !important;
+  }
+  .contact-box {
+    padding: 75px 10px 15px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  #page p,
+  #page li,
+  p,
+  li {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
 /* end of 575.98 */
 /* end of 359.98 */
 /* end of 359.98 */
