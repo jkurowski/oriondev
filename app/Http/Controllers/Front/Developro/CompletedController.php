@@ -13,7 +13,7 @@ class CompletedController extends Controller
     private int $pageId;
     public function __construct()
     {
-        $this->pageId = 7;
+        $this->pageId = 10;
     }
 
     public function index()
