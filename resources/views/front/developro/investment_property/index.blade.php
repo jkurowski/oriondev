@@ -80,43 +80,45 @@
                     <div class="row">
                         <div class="col-12 col-sm-7 d-flex flex-column align-items-start justify-content-start gap-15 scroll-anim-bottom">
 
-                            @if($property->highlighted && $property->promotion_price)
-                                <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #FF0000">
-                                    <span>Cena promocyjna</span>
-                                    <span><b>@money($property->promotion_price)</b></span>
-                                </div>
+                            @if($property->statuis == 1)
+                                @if($property->highlighted && $property->promotion_price)
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #FF0000">
+                                        <span>Cena promocyjna</span>
+                                        <span><b>@money($property->promotion_price)</b></span>
+                                    </div>
+                                @endif
+
+                                @php
+                                    $area = (float) str_replace(',', '.', $property->area);
+                                @endphp
+
+                                @if($property->highlighted && $property->promotion_price && $area > 0)
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #FF0000">
+                                        <span>Cena promocyjna za m<sup>2</sup></span>
+                                        <span><b>@money($property->promotion_price / $area)</b></span>
+                                    </div>
+                                @endif
+
+                                @if($property->price_brutto)
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through text-muted @endif">
+                                        <span>Cena</span>
+                                        <span><b>@money($property->price_brutto)</b></span>
+                                    </div>
+                                @endif
+
+                                @php
+                                    $area = (float) str_replace(',', '.', $property->area);
+                                @endphp
+
+                                @if($property->price_brutto && $area > 0)
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through text-muted @endif">
+                                        <span>Cena za m<sup>2</sup></span>
+                                        <span><b>@money($property->price_brutto / $area)</b></span>
+                                    </div>
+                                @endif
                             @endif
 
-                            @php
-                                $area = (float) str_replace(',', '.', $property->area);
-                            @endphp
-
-                            @if($property->highlighted && $property->promotion_price && $area > 0)
-                                <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #FF0000">
-                                    <span>Cena promocyjna za m<sup>2</sup></span>
-                                    <span><b>@money($property->promotion_price / $area)</b></span>
-                                </div>
-                            @endif
-
-                            @if($property->price_brutto)
-                                <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through text-muted @endif">
-                                    <span>Cena</span>
-                                    <span><b>@money($property->price_brutto)</b></span>
-                                </div>
-                            @endif
-
-                            @php
-                                $area = (float) str_replace(',', '.', $property->area);
-                            @endphp
-
-                            @if($property->price_brutto && $area > 0)
-                                <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through text-muted @endif">
-                                    <span>Cena za m<sup>2</sup></span>
-                                    <span><b>@money($property->price_brutto / $area)</b></span>
-                                </div>
-                            @endif
-
-                            @if(!$property->is_investment_property)
+                            @if($property->kitchen)
                                 <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
                                     <span>Aneks/Kuchnia</span>
                                     <span><b>{{ kitchenType($property->kitchen) }}</b></span>
