@@ -20,10 +20,15 @@ class MenuController extends Controller
     public function index($uri = null)
     {
 
-        $page = null;
+        $pages = [
+            'kontakt' => 1,
+            'o-nas' => 2,
+            'regulamin' => 3,
+            'polityka-prywatnosci' => 4,
+        ];
 
-        if ($uri == 'wszemirow') {
-            $page = Page::find(1);
+        if (isset($pages[$uri])) {
+            $page = Page::find($pages[$uri]);
         }
 
         if (!view()->exists('front.menupage.'.$uri)) {
