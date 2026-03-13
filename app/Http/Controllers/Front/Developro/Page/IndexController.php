@@ -18,7 +18,7 @@ class IndexController extends Controller
     public function __construct(InvestmentRepository $repository)
     {
         $this->repository = $repository;
-        $this->pageId = 11;
+        $this->pageId = 9;
     }
 
     public function show($slug, $page)
