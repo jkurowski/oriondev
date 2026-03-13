@@ -38,7 +38,7 @@
                     @endif
 
                     @if($building->search_form)
-                        @include('front.developro.search.floor-search-form')
+                        @include('front.developro.search.building-search-form')
                     @endif
 
                     <div class="container-fluid mieszkania-list">
