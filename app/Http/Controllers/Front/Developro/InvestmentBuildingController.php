@@ -18,7 +18,7 @@ class InvestmentBuildingController extends Controller
     public function __construct(BuildingRepository $repository)
     {
         $this->repository = $repository;
-        $this->pageId = 2;
+        $this->pageId = 9;
     }
 
     public function index($slug, Building $building, Request $request)
