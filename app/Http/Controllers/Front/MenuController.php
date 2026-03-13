@@ -25,6 +25,9 @@ class MenuController extends Controller
             'wykonczenie-mieszkan' => 2,
             'o-firmie' => 3,
             'partnerzy' => 4,
+            'aktualnosci' => 5,
+            'praca' => 7,
+            'relacje-inwestorskie' => 8,
         ];
 
         if (isset($pages[$uri])) {

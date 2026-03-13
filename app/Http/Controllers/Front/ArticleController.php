@@ -20,12 +20,12 @@ class ArticleController extends Controller
             'aktualnosci' => [
                 'type' => 1,
                 'view' => 'front.article.index',
-                'page' => 2
+                'page' => 5
             ],
             'blog' => [
                 'type' => 2,
                 'view' => 'front.blog.index',
-                'page' => 3
+                'page' => 6
             ]
         ];
 
@@ -47,11 +47,11 @@ class ArticleController extends Controller
         $config = [
             'aktualnosci' => [
                 'type' => 1,
-                'page' => 2
+                'page' => 5
             ],
             'blog' => [
                 'type' => 2,
-                'page' => 3
+                'page' => 6
             ]
         ];
 
