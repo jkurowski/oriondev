@@ -80,7 +80,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-7 d-flex flex-column align-items-start justify-content-start gap-15 scroll-anim-bottom">
 
-                            @if($property->statuis == 1)
+                            @if($property->status == 1)
                                 @if($property->highlighted && $property->promotion_price)
                                     <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #FF0000">
                                         <span>Cena promocyjna</span>
