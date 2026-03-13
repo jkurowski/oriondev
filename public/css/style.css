@@ -1013,6 +1013,13 @@ header .header-phone a:hover {
   line-height: 24px;
   color: white;
 }
+#page .page-search__wrapper select {
+  font-size: 16px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 17px 10px;
+  margin-top: 10px;
+}
 #page .mieszkania-page-title {
   background: white;
   border: 1px solid #f1f1f1;
@@ -1073,6 +1080,9 @@ header .header-phone a:hover {
   display: inline-grid;
   justify-content: center;
   font-size: 12px;
+}
+.mieszkania-list-icn .mieszkania-list-icn-item i {
+  font-size: 10px;
 }
 .mieszkania-list-icn .mieszkania-list-icn-item svg {
   width: 19px;

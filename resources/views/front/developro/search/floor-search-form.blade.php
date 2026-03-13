@@ -55,8 +55,8 @@
 
                         <div class="col">
                             <label class="form-label mb-1" for="">&nbsp;</label>
-                            <button type="submit" class="custom-button w-100">
-                                Szukaj
+                            <button type="submit" class="bttn bttn-icon w-100">
+                                Szukaj <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><g clip-path="url(#sendIcon)"><path d="M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z"></path></g><defs><clipPath id="sendIcon"><rect width="12.0465" height="12.0465" transform="translate(0 8.51855) rotate(-45)"></rect></clipPath></defs></svg></span>
                             </button>
                         </div>
                     </div>
