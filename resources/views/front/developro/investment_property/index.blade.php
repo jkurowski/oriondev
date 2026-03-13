@@ -78,7 +78,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-xl-8">
                     <div class="row">
-                        <div class="col-12 col-sm-7 d-flex flex-column align-items-start justify-content-start gap-15 scroll-anim-bottom">
+                        <div class="col-12 col-sm-5 d-flex flex-column align-items-start justify-content-start">
 
                             @if($property->status == 1)
                                 @if($property->highlighted && $property->promotion_price)
@@ -228,7 +228,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-5 mt-4 mt-sm-0">
+                        <div class="col-12 col-sm-7 mt-4 mt-sm-0">
                             @if($property->file)
                                 <a href="{{ asset('/investment/property/'.$property->file) }}" data-lightbox="property" rel="property" class="d-block m-auto">
                                     <picture>
