@@ -21,7 +21,7 @@ class InvestmentController extends Controller
     public function __construct(InvestmentRepository $repository)
     {
         $this->repository = $repository;
-        $this->pageId = 4;
+        $this->pageId = 9;
     }
 
     public function show($slug)

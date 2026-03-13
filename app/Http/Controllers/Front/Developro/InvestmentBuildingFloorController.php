@@ -26,7 +26,7 @@ class InvestmentBuildingFloorController extends Controller
     {
         $investment = Investment::findBySlug($slug);
 
-        $page = Page::where('id', 8)->first();
+        $page = Page::where('id', 9)->first();
 
         $investments = Investment::where('status', 1)
             ->when(in_array($investment->type, [1, 2]), function ($query) {
