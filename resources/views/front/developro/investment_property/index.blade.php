@@ -1,9 +1,9 @@
 @extends('layouts.page', ['body_class' => 'position-relative', 'body_id' => 'page-karta-mieszkania'])
 
-{{--@section('meta_title', $page->title.' - '.$investment->name.' - '.$floor->name)--}}
-{{--@section('seo_title', $page->meta_title)--}}
-{{--@section('seo_description', $page->meta_description)--}}
-{{--@section('seo_robots', $page->meta_robots)--}}
+@section('meta_title', $page->title.' - '.$investment->name.' - '.$property->name)
+@section('seo_title', $page->meta_title)
+@section('seo_description', $page->meta_description)
+@section('seo_robots', $page->meta_robots)
 
 @section('content')
     <!-- MAIN SECTION -->
