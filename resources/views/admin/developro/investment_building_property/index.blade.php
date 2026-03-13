@@ -57,6 +57,7 @@
                             <th class="text-center">Wizyty</th>
                             <th class="text-center">Wiadomości</th>
                             <th class="text-center">Widoczność</th>
+                            <th class="text-center">Promocja</th>
                             <th>Data modyfikacji</th>
                             <th>Data sprzedaży</th>
                             <th></th>
@@ -84,6 +85,7 @@
                                 <td class="text-center">{{ $p->views }}</td>
                                 <td class="text-center">{{ $p->roomsNotifications()->count() }}</td>
                                 <td class="text-center">{!! status($p->active) !!}</td>
+                                <td class="text-center">{!! status($p->highlighted) !!}</td>
                                 <td class="text-center">{!! tableDate($p->updated_at) !!}</td>
                                 <td class="text-center">
                                     {!! tableDate($p->saled_at) !!}
