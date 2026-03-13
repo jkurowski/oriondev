@@ -24,7 +24,7 @@
                             <span class="dm-sans-500">O firmie <i>▼</i></span>
                             <ul class="mb-0 list-unstyled submenu">
                                 <li><a href="{{ route('front.menu.show', ['uri' => 'o-firmie']) }}">O nas</a></li>
-                                <li><a href="{{ route('front.menu.show', ['uri' => 'partnerzy']) }}">Partnerzy</a></li>
+                                <li class="d-none"><a href="{{ route('front.menu.show', ['uri' => 'partnerzy']) }}">Partnerzy</a></li>
                                 <li><a href="{{ route('front.menu.show', ['uri' => 'aktualnosci']) }}">Aktualności</a></li>
                                 <li><a href="{{ route('front.menu.show', ['uri' => 'blog']) }}">Blog</a></li>
                                 <li><a href="{{ route('front.menu.show', ['uri' => 'praca']) }}">Kariera</a></li>
