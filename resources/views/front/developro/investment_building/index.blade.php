@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-2">
-                    <div class="sidemenu">
+                    <div class="sidemenu sticky-top">
                         @include('front.developro.investment_shared.menu')
                     </div>
                 </div>

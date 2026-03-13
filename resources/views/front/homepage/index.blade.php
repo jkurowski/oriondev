@@ -19,7 +19,7 @@
                                         </div>
 
                                         <div class="hero-button">
-                                            <a class="bttn bttn-icon" href="#">Poznaj inwestycję <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><g clip-path="url(#sendIcon)"><path d="M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z"/></g><defs><clipPath id="sendIcon"><rect width="12.0465" height="12.0465" transform="translate(0 8.51855) rotate(-45)"/></clipPath></defs></svg></span></a>
+                                            <a class="bttn bttn-icon" href="{{ route('front.developro.show', 'duo-park') }}">Poznaj inwestycję <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><g clip-path="url(#sendIcon)"><path d="M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z"/></g><defs><clipPath id="sendIcon"><rect width="12.0465" height="12.0465" transform="translate(0 8.51855) rotate(-45)"/></clipPath></defs></svg></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <form class="row pt-5 mt-5 pb-5 mb-5" method="get">
+                <form class="row pt-5 mt-5 pb-5 mb-5" method="get" action="{{ route('front.developro.plan', 'duo-park') }}">
 
                     <!-- INWESTYCJE -->
                     <div class="col">
@@ -56,9 +56,7 @@
                                 Wszystkie
                             </button>
                             <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item active" href="#" data-value="">Wszystkie</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="inv1">Inwestycja 1</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="inv2">Inwestycja 2</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="inv2">Duo Park</a></li>
                             </ul>
                         </div>
                         <input type="hidden" name="investment" id="investmentInput">
@@ -98,7 +96,8 @@
                                 <li><a class="dropdown-item active" href="#" data-value="">Wszystkie</a></li>
                                 <li><a class="dropdown-item" href="#" data-value="1">1</a></li>
                                 <li><a class="dropdown-item" href="#" data-value="2">2</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="3">3+</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="3">3</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="4">4</a></li>
                             </ul>
                         </div>
                         <input type="hidden" name="rooms" id="roomsInput">
@@ -127,21 +126,7 @@
                     <!-- SUBMIT -->
                     <div class="col-3 ps-4">
                         <div class="row form-checkboxes d-flex align-items-center h-100">
-                            <div class="col-5">
-                                <div class="form-check p-0 d-flex align-items-center justify-content-between">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                    <label class="form-check-label" for="checkDefault">
-                                        Kuchnia
-                                    </label>
-                                </div>
-                                <div class="form-check p-0 d-flex align-items-center justify-content-between">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
-                                    <label class="form-check-label" for="checkChecked">
-                                        Aneks
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-7 d-flex align-items-center h-100">
+                            <div class="col-12 d-flex align-items-center h-100">
                                 <button type="submit" class="w-100 h-100">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.75 4.5C21.5154 4.50035 18.3278 5.27558 15.4543 6.76078C12.5808 8.24599 10.1049 10.398 8.2338 13.0365C6.36274 15.6751 5.15099 18.7235 4.69999 21.9266C4.249 25.1297 4.57187 28.3942 5.6416 31.4468C6.71132 34.4995 8.49676 37.2514 10.8485 39.4724C13.2002 41.6933 16.0497 43.3186 19.1585 44.2121C22.2673 45.1056 25.5449 45.2414 28.7169 44.6081C31.889 43.9748 34.8632 42.5908 37.3905 40.572L45.6593 48.8408C46.0836 49.2506 46.652 49.4774 47.2419 49.4723C47.8319 49.4671 48.3962 49.2305 48.8134 48.8133C49.2305 48.3962 49.4672 47.8318 49.4723 47.2419C49.4774 46.652 49.2506 46.0836 48.8408 45.6592L40.572 37.3905C42.9525 34.4112 44.4433 30.8202 44.8729 27.031C45.3024 23.2417 44.6533 19.4082 43.0001 15.9716C41.3469 12.535 38.757 9.63513 35.5283 7.60566C32.2997 5.57619 28.5635 4.49967 24.75 4.5ZM11.25 24.75C11.25 22.9772 11.5992 21.2217 12.2776 19.5838C12.9561 17.9459 13.9505 16.4576 15.2041 15.2041C16.4577 13.9505 17.9459 12.9561 19.5838 12.2776C21.2217 11.5992 22.9772 11.25 24.75 11.25C26.5229 11.25 28.2783 11.5992 29.9162 12.2776C31.5541 12.9561 33.0424 13.9505 34.2959 15.2041C35.5495 16.4576 36.5439 17.9459 37.2224 19.5838C37.9008 21.2217 38.25 22.9772 38.25 24.75C38.25 28.3304 36.8277 31.7642 34.2959 34.2959C31.7642 36.8277 28.3304 38.25 24.75 38.25C21.1696 38.25 17.7358 36.8277 15.2041 34.2959C12.6723 31.7642 11.25 28.3304 11.25 24.75Z"/>

@@ -1068,7 +1068,7 @@ header .header-phone a:hover {
   padding-bottom: 15px;
 }
 .mieszkania-list-icn .mieszkania-list-icn-item {
-  width: 33.3333%;
+  width: 25%;
   display: inline-grid;
   justify-content: center;
   font-size: 12px;
@@ -1078,6 +1078,9 @@ header .header-phone a:hover {
   height: 19px;
   margin: 0 auto 10px;
   fill: #ff9500;
+}
+.mieszkania-list-icn span {
+  text-align: center;
 }
 #page #planNav a {
   background: #003761;
