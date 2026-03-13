@@ -207,7 +207,7 @@
                             @endif
                             <div class="container-fluid p-0">
                                 <div class="row">
-                                    <div class="col-12 col-sm-6">
+                                    <div class="col-12">
                                         @if($property->file_pdf)
                                             <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" class="bttn bttn-icon bttn-white mt-5" target="_blank">
                                                 @if($property->is_investment_property)
@@ -219,7 +219,7 @@
                                             </a>
                                         @endif
                                     </div>
-                                    <div class="col-12 col-sm-6 mt-2 mt-sm-0">
+                                    <div class="col-12">
                                         @if($investment->file_brochure)
                                             <a href="{{ asset('investment/brochure/'.$investment->file_brochure) }}" class="custom-button mt-0mt-md-10" target="_blank">Prospekt informacyjny</a>
                                         @endif
@@ -245,24 +245,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 col-lg-7 col-xl-6 col-xxl-5 d-flex flex-column align-items-start justify-content-start gap-15 mt-15 mt-lg-0 scroll-anim-bottom d-none">
-                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
-                        <span>Cena miejsca postojowego - garaż podziemny</span>
-                        <span>ceny od 40.000 zł</span>
-                    </div>
-                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
-                        <span>Cena miejsca postojowego - garaż nadziemny</span>
-                        <span>ceny od 40.000 zł</span>
-                    </div>
-                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
-                        <span>Cena komórki lokatorskiej</span>
-                        <span>ceny od 40.000 zł</span>
-                    </div>
-                </div>
-
             </div>
 
             @if($property->text)
