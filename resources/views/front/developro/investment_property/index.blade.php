@@ -228,17 +228,19 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-7 mt-4 mt-sm-0">
+                        <div class="col-12 col-sm-7 mt-4 mt-sm-0 ps-4">
                             @if($property->file)
-                                <a href="{{ asset('/investment/property/'.$property->file) }}" data-lightbox="property" rel="property" class="d-block m-auto">
-                                    <picture>
-                                        @if($property->file_webp)
-                                            <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
-                                        @endif
-                                        <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
-                                        <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}" loading="lazy" decoding="async" class="mieszkania-list__img">
-                                    </picture>
-                                </a>
+                                <div class="room-plan-img">
+                                    <a href="{{ asset('/investment/property/'.$property->file) }}" data-lightbox="property" rel="property" class="d-block m-auto">
+                                        <picture>
+                                            @if($property->file_webp)
+                                                <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
+                                            @endif
+                                            <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
+                                            <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}" loading="lazy" decoding="async" class="mieszkania-list__img">
+                                        </picture>
+                                    </a>
+                                </div>
                             @endif
                         </div>
                     </div>
