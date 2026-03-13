@@ -233,10 +233,10 @@
                                 <a href="{{ asset('/investment/property/'.$property->file) }}" data-lightbox="property" rel="property" class="d-block m-auto">
                                     <picture>
                                         @if($property->file_webp)
-                                            <source type="image/webp" srcset="{{ asset('/investment/property/webp/'.$property->file_webp) }}">
+                                            <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
                                         @endif
-                                        <source type="image/jpeg" srcset="{{ asset('/investment/property/'.$property->file) }}">
-                                        <img src="{{ asset('/investment/property/'.$property->file) }}" alt="{{$property->name}}" loading="lazy" decoding="async" class="mieszkania-list__img">
+                                        <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
+                                        <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}" loading="lazy" decoding="async" class="mieszkania-list__img">
                                     </picture>
                                 </a>
                             @endif
