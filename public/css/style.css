@@ -425,6 +425,7 @@ button:focus,
 }
 .bttn.bttn-white {
   border-color: #d6d6d6;
+  background: white;
 }
 .bttn.bttn-white:hover {
   border-color: #003761;
