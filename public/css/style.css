@@ -423,6 +423,14 @@ button:focus,
 .bttn.bttn-icon:hover span svg {
   fill: #FF9500;
 }
+.bttn.bttn-white {
+  border-color: #d6d6d6;
+}
+.bttn.bttn-white:hover {
+  border-color: #003761;
+  background: #003761;
+  color: white !important;
+}
 .w-700 {
   max-width: 700px;
 }
@@ -1442,6 +1450,60 @@ footer #copyrights span {
   font-weight: 500;
   line-height: 44px;
   margin: 25px 0 0 0;
+}
+/* Opis inwestycji
+================================================== */
+.apartament-slider__slider-for img {
+  border-radius: 5px;
+}
+.apartament-slider__slider-nav .slick-slide {
+  padding: 0 10px;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+.apartament-slider__slider-nav .slick-slide.slick-current,
+.apartament-slider__slider-nav .slick-slide:hover {
+  opacity: 1;
+}
+.apartament-slider__slider-nav .slick-slide img {
+  border-radius: 5px;
+}
+.slick-arrow {
+  width: 48px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 99;
+  background: #ff9500;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.slick-arrow:hover {
+  transition: 0.5s all !important;
+}
+.slick-next {
+  right: -24px;
+}
+.slick-prev {
+  left: -24px;
+}
+.map-container {
+  height: 540px;
+  background: white;
+  border: 1px solid #f1f1f1;
+  padding: 19px;
+}
+.border-blue {
+  border: 1px solid #1c4d72;
+  padding: 19px;
+  position: relative;
+  right: -1px;
 }
 /* RWD
 ================================================== */

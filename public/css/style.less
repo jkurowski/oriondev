@@ -433,6 +433,14 @@ button:focus,
       }
     }
   }
+    &.bttn-white {
+        border-color: #d6d6d6;
+        &:hover {
+            border-color: #003761;
+            background: #003761;
+            color: white !important;
+        }
+    }
 }
 
 .w-700 {
@@ -1456,6 +1464,63 @@ footer {
   margin: 25px 0 0 0;
 }
 
+/* Opis inwestycji
+================================================== */
+.apartament-slider__slider-for {
+    img {
+        border-radius: 5px;
+    }
+}
+.apartament-slider__slider-nav {
+    .slick-slide {
+        padding: 0 10px;
+        opacity: 0.6;
+        transition: all .2s;
+        &.slick-current, &:hover {
+            opacity: 1;
+        }
+        img {
+            border-radius: 5px;
+        }
+    }
+}
+.slick-arrow {
+    width: 48px;
+    height: 48px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 99;
+    background: #ff9500;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.slick-arrow:hover {
+    transition: 0.5s all !important;
+}
+.slick-next {
+    right: -24px;
+}
+.slick-prev {
+    left: -24px;
+}
+.map-container {
+    height: 540px;
+    background: white;
+    border: 1px solid #f1f1f1;
+    padding: 19px;
+}
+.border-blue {
+    border: 1px solid #1c4d72;
+    padding: 19px;
+    position: relative;
+    right: -1px;
+}
 /* RWD
 ================================================== */
 @media (max-width: 1399.98px) {

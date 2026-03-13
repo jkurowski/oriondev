@@ -14,7 +14,7 @@
                         <li>
                             <span class="dm-sans-500">Inwestycje <i>▼</i></span>
                             <ul class="mb-0 list-unstyled submenu">
-                                <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-aktualne']) }}">Inwestycje aktualne</a></li>
+                                <li><a href="{{ route('front.developro.show', 'duo-park') }}">Inwestycje aktualne</a></li>
                                 <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-zrealizowane']) }}">Inwestycje zrealizowane</a></li>
                                 <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-planowane']) }}">Inwestycje planowane</a></li>
                             </ul>
