@@ -10,11 +10,11 @@ window.jQuery(el).slick({
     responsive: [
         {
             breakpoint: 992,
-            settings: { slidesToShow: 2 }
+            settings: { slidesToShow: 3 }
         },
         {
             breakpoint: 576,
-            settings: { slidesToShow: 1 }
+            settings: { slidesToShow: 2 }
         }
     ]
 });

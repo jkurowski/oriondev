@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <form class="row pt-0 pt-sm-5 mt-3 mt-sm-5 pb-0 pb-sm-5 mb-3 mb-sm-5" method="get" action="{{ route('front.developro.plan', 'duo-park') }}">
+                <form class="row pt-0 pt-lg-5 mt-3 mt-lg-5 pb-0 pb-sm-5 mb-3 mb-sm-5" method="get" action="{{ route('front.developro.plan', 'duo-park') }}">
 
                     <!-- INWESTYCJE -->
                     <div class="col-6 col-md">
