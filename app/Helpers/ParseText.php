@@ -102,7 +102,7 @@ if (! function_exists('makeSurfaceList')) {
         $properties = Property::whereIn('status', [1, 2])
             ->where('investment_id', $investmentId)
             ->whereIn('type', $types)
-            ->orderBy('number_order')
+            ->orderBy('status')
             ->get();
 
         return view('front.parse.surface-list', [
