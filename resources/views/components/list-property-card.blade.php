@@ -2,39 +2,41 @@
 
 <div class="col-12 col-md-6 col-xl-4">
     <div class="mieszkania-list-item position-relative">
-        @if($property->investment->type == 1 && $property->status <> 3)
-            <a class="mieszkania-list-link z-2" href="{{ route('front.developro.building.floor.property', [
-                $property->investment->slug,
-                $property->building,
-                Str::slug($property->building->name),
-                $property->floor,
-                Str::slug($property->floor->name),
-                $property,
-                Str::slug($property->name),
-                number2RoomsName($property->rooms, true),
-                round(floatval($property->area), 2).'-m2'
-            ]) }}"></a>
-        @endif
+        @if($property->type == 1)
+            @if($property->investment->type == 1 && $property->status <> 3)
+                <a class="mieszkania-list-link z-2" href="{{ route('front.developro.building.floor.property', [
+                    $property->investment->slug,
+                    $property->building,
+                    Str::slug($property->building->name),
+                    $property->floor,
+                    Str::slug($property->floor->name),
+                    $property,
+                    Str::slug($property->name),
+                    number2RoomsName($property->rooms, true),
+                    round(floatval($property->area), 2).'-m2'
+                ]) }}"></a>
+            @endif
 
-        @if($property->investment->type == 2 && $property->status <> 3)
-            <a class="mieszkania-list-link z-2" href="{{ route('front.developro.property', [
-                $property->investment->slug,
-                $property->floor,
-                Str::slug($property->floor->name),
-                $property,
-                Str::slug($property->name),
-                number2RoomsName($property->rooms, true),
-                round(floatval($property->area), 2).'-m2'
-            ]) }}"></a>
-        @endif
+            @if($property->investment->type == 2 && $property->status <> 3)
+                <a class="mieszkania-list-link z-2" href="{{ route('front.developro.property', [
+                    $property->investment->slug,
+                    $property->floor,
+                    Str::slug($property->floor->name),
+                    $property,
+                    Str::slug($property->name),
+                    number2RoomsName($property->rooms, true),
+                    round(floatval($property->area), 2).'-m2'
+                ]) }}"></a>
+            @endif
 
-        @if($property->investment->type == 3 && $property->status <> 3)
-            <a class="mieszkania-list-link z-2" href="{{ route('front.developro.house', [
-                $property->investment->slug,
-                $property,
-                Str::slug($property->name),
-                round(floatval($property->area), 2).'-m2'
-            ]) }}"></a>
+            @if($property->investment->type == 3 && $property->status <> 3)
+                <a class="mieszkania-list-link z-2" href="{{ route('front.developro.house', [
+                    $property->investment->slug,
+                    $property,
+                    Str::slug($property->name),
+                    round(floatval($property->area), 2).'-m2'
+                ]) }}"></a>
+            @endif
         @endif
 
         <div class="mieszkania-list-flex d-flex flex-column align-items-center align-items-lg-start justify-content-start">
@@ -58,13 +60,14 @@
                     <span>{{ $property->area }} m<sup>2</sup></span>
                 </div>
 
-                {{-- Pokoje --}}
+                @if($property->type == 1)
                 <div class="mieszkania-list-icn-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30.74" height="30.739" viewBox="0 0 30.74 30.739"> <g id="karta-02" transform="translate(0.75 0.75)"> <path id="Path_28" data-name="Path 28" d="M25,13.208V2H43.031V21.005H37.67V31.239H33.284" transform="translate(-13.792 -2)" fill="none" stroke="#ff9500" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/> <path id="Path_29" data-name="Path 29" d="M20.031,33.954l-2.924,2.924H2V13H13.208" transform="translate(-2 -7.64)" fill="none" stroke="#ff9500" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/> <path id="Path_30" data-name="Path 30" d="M25,34v6.335" transform="translate(-13.792 -18.406)" fill="none" stroke="#ff9500" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/> <path id="Path_31" data-name="Path 31" d="M25,56v2.924" transform="translate(-13.792 -29.685)" fill="none" stroke="#ff9500" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/> <path id="Path_32" data-name="Path 32" d="M13.208,41H2" transform="translate(-2 -21.995)" fill="none" stroke="#ff9500" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/> </g> </svg>
                     <span class="d-flex flex-row align-items-center justify-content-start gap-10">
                         Pokoje: <div class="mieszkania-list-box">{{ $property->rooms }}</div>
                     </span>
                 </div>
+                @endif
 
                 @if($property->investment->type <> 3)
                 <div class="mieszkania-list-icn-item">
@@ -105,30 +108,32 @@
 
             {{-- Przyciski --}}
             <div class="mieszkania-list-btn">
-                @if($property->investment->type == 1 && $property->status <> 3)
-                    <a class="custom-button z-2" href="{{ route('front.developro.building.floor.property', [
-                        $property->investment->slug,
-                        $property->building,
-                        Str::slug($property->building->name),
-                        $property->floor,
-                        Str::slug($property->floor->name),
-                        $property,
-                        Str::slug($property->name),
-                        number2RoomsName($property->rooms, true),
-                        round(floatval($property->area), 2).'-m2'
-                    ]) }}">Sprawdź</a>
-                @endif
+                @if($property->type == 1)
+                    @if($property->investment->type == 1 && $property->status <> 3)
+                        <a class="custom-button z-2" href="{{ route('front.developro.building.floor.property', [
+                            $property->investment->slug,
+                            $property->building,
+                            Str::slug($property->building->name),
+                            $property->floor,
+                            Str::slug($property->floor->name),
+                            $property,
+                            Str::slug($property->name),
+                            number2RoomsName($property->rooms, true),
+                            round(floatval($property->area), 2).'-m2'
+                        ]) }}">Sprawdź</a>
+                    @endif
 
-                @if($property->investment->type == 2 && $property->status <> 3)
-                    <a class="custom-button z-2" href="{{ route('front.developro.property', [
-                        $property->investment->slug,
-                        $property->floor,
-                        Str::slug($property->floor->name),
-                        $property,
-                        Str::slug($property->name),
-                        number2RoomsName($property->rooms, true),
-                        round(floatval($property->area), 2).'-m2'
-                    ]) }}">Sprawdź</a>
+                    @if($property->investment->type == 2 && $property->status <> 3)
+                        <a class="custom-button z-2" href="{{ route('front.developro.property', [
+                            $property->investment->slug,
+                            $property->floor,
+                            Str::slug($property->floor->name),
+                            $property,
+                            Str::slug($property->name),
+                            number2RoomsName($property->rooms, true),
+                            round(floatval($property->area), 2).'-m2'
+                        ]) }}">Sprawdź</a>
+                    @endif
                 @endif
 
                 {!! roomStatusBadge($property->status) !!}
