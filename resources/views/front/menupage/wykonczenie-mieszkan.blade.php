@@ -45,28 +45,28 @@
             <div class="row mt-3">
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="iconbox pe-0 pe-sm-5">
-                        <img src="images/icons/paint-roller.svg" alt="" width="76" height="76">
+                        <img src="images/icons/klucze.svg" alt="" width="76" height="76">
                         <h3>Odbiór<br> kluczy</h3>
                         <p>Początek drogi do stworzenia własnej, idealnie dopasowanej przestrzeni.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mt-5 mt-sm-0">
                     <div class="iconbox pe-0 pe-sm-5">
-                        <img src="images/icons/paint-roller.svg" alt="" width="76" height="76">
+                        <img src="images/icons/projekt.svg" alt="" width="76" height="76">
                         <h3>Indywidualny<br> projekt</h3>
                         <p>Projekt wnętrza dopasowany do Państwa stylu życia i potrzeb.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mt-5 mt-lg-0">
                     <div class="iconbox pe-0 pe-sm-5">
-                        <img src="images/icons/paint-roller.svg" alt="" width="76" height="76">
+                        <img src="images/icons/wykonczenie.svg" alt="" width="76" height="76">
                         <h3>Kompleksowe<br> wykończenie</h3>
                         <p>Od projektu po realizację - wszystkim zajmuje się doświadczony zespół.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mt-5 mt-lg-0">
                     <div class="iconbox">
-                        <img src="images/icons/paint-roller.svg" alt="" width="76" height="76">
+                        <img src="images/icons/mieszkanie-pokazowe.svg" alt="" width="76" height="76">
                         <h3>Mieszkanie<br> pokazowe</h3>
                         <p>Zobacz na żywo standard wykończenia i możliwości aranżacji wnętrza.</p>
                     </div>
