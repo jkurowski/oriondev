@@ -33,12 +33,14 @@
                     @endif
                 @endif
                 <td class="text-center">
-                    @if($property->highlighted && $property->promotion_price)
-                        <span style="color:#ff0000;display: block">@money($property->promotion_price)</span>
-                        <s class="small" style="color:#646464">@money($property->price_brutto)</s>
-                    @else
-                        @money($property->price_brutto)
-                    @endif
+                    @isset($property->price_brutto)
+                        @if($property->highlighted && $property->promotion_price)
+                            <span style="color:#ff0000;display: block">@money($property->promotion_price)</span>
+                            <s class="small" style="color:#646464">@money($property->price_brutto)</s>
+                        @else
+                            @money($property->price_brutto)
+                        @endif
+                    @endisset
                 </td>
                 <td>{{ $property->floor->name }}</td>
                 <td class="text-center">{!! roomStatusBadge($property->status) !!}</td>
