@@ -7,11 +7,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="hero-item hero-item w-100 h-100 d-flex align-items-center justify-content-end position-relative">
-                            <img src="images/duo-park-her.png" alt="" width="1161" height="929">
+                            <img src="{{ asset('images/duo-park-her.png') }}" alt="" width="1161" height="929">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-12">
-                                        <img src="https://placehold.co/534x383" alt="" class="hero-img-sub">
+                                        <img src="{{ asset('images/duo-park-subhero.jpg') }}" alt="" class="hero-img-sub">
 
                                         <div class="hero-apla">
                                             <h1>Duo Park</h1>
@@ -156,7 +156,7 @@
                             </div>
                             <p>Jako ORION DEVELOPMENT prowadzimy sprzedaż mieszkań w atrakcyjnych lokalizacjach i o wysokim standardzie. Stawiamy na rozwiązania przyjazne środowisku, ekologiczne, kładąc nacisk na potrzeby przyszłych mieszkańców.</p>
                         </div>
-                        <img src="images/usmiechnieta-para-w-nowym-mieszkaniu.jpg" alt="" width="700" height="450" class="d-none d-lg-block mt-5">
+                        <img src="{{ asset('images/usmiechnieta-para-w-nowym-mieszkaniu.jpg') }}" alt="" width="700" height="450" class="d-none d-lg-block mt-5">
                     </div>
                     <div class="col-12 col-lg-1"></div>
                     <div class="col-12 col-lg-5 d-flex align-items-center">
@@ -184,12 +184,12 @@
             <div class="container container-1920">
                 <div class="row">
                     <div class="col-12 col-xl-11 col-xxl-10 offset-0 offset-xl-1 offset-xxl-2">
-                        <img src="images/wizualizacja-inwestycji-big.jpg" alt="" width="1580" height="840">
+                        <img src="{{ asset('images/wizualizacja-inwestycji-big.jpg') }}" alt="" width="1580" height="840">
                     </div>
                 </div>
                 <div class="row row-overlay">
                     <div class="col-6 col-xxl-5 d-none d-xl-block">
-                        <img src="images/wizualizacja-inwestycji-small.jpg" alt="" width="776" height="553" class="img-border-overlay">
+                        <img src="{{ asset('images/wizualizacja-inwestycji-small.jpg') }}" alt="" width="776" height="553" class="img-border-overlay">
                     </div>
                 </div>
             </div>
@@ -221,21 +221,21 @@
                 <div class="row mt-5 mt-lg-3">
                     <div class="col-12 col-md-4 col-lg-3">
                         <div class="iconbox pe-0 pe-md-3 pe-lg-5">
-                            <img src="images/icons/elevator.svg" alt="" width="76" height="76">
+                            <img src="{{ asset('images/icons/elevator.svg') }}" alt="" width="76" height="76">
                             <h3>Udogodnienia</h3>
                             <p>Duo Park to nie tylko unikatowa oferta poprawy jakości życia, ale także duże relaksacyjne balkony i windy</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-lg-3">
                         <div class="iconbox pe-0 pe-md-3 pe-lg-5">
-                            <img src="images/icons/car-parking.svg" alt="" width="76" height="76">
+                            <img src="{{ asset('images/icons/car-parking.svg') }}" alt="" width="76" height="76">
                             <h3>Miejsca postojowe</h3>
                             <p>Wygodne miejsca postojowe naziemne w cenie 35 000 zł i podziemne w cenie 50 000 zł</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-lg-3">
                         <div class="iconbox">
-                            <img src="images/icons/paint-roller.svg" alt="" width="76" height="76">
+                            <img src="{{ asset('images/icons/paint-roller.svg') }}" alt="" width="76" height="76">
                             <h3>Wykończenie pod klucz</h3>
                             <p>Kompleksowe wykończenie mieszkania w wybranym standardzie - od projektu po realizację, bez stresu i bez szukania ekip</p>
                         </div>
@@ -348,7 +348,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <div class="pe-0 pe-lg-5">
-                            <img src="images/rodzina-nowe-mieszkanie.jpg" alt="" width="800" height="600">
+                            <img src="{{ asset('images/rodzina-nowe-mieszkanie.jpg') }}" alt="" width="800" height="600">
                         </div>
                     </div>
                     <div class="col-12 col-lg-6 mt-4 mt-lg-0">
