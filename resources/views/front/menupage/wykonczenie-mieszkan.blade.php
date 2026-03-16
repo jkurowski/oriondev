@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-start align-items-center mt-5 mt-lg-0">
-                    <img src="{{ asset('images/kariera.webp') }}" alt="" class="img-rounded">
+                    <img src="{{ asset('images/wykonczenie-1.jpg') }}" alt="" class="img-rounded">
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-end align-items-center mt-5 mt-lg-0">
-                    <img src="{{ asset('images/kariera.webp') }}" alt="" class="img-rounded">
+                    <img src="{{ asset('images/wykonczenie-2.jpg') }}" alt="" class="img-rounded">
                 </div>
             </div>
 
