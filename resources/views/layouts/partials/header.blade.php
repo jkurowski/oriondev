@@ -2,14 +2,14 @@
 <header>
     <div class="container">
         <div class="row">
-            <div class="col-2">
+            <div class="col-4 col-xl-2">
                 <div id="logo">
                     <a href="/"><img src="{{ asset('images/logo-white-png.png') }}" alt="" width="206" height="99"></a>
                 </div>
             </div>
-            <div class="col-10">
-                <nav class="d-flex h-100 align-items-center justify-content-end">
-                    <ul class="list-unstyled d-flex justify-content-end mb-0">
+            <div class="col-8 col-xl-10">
+                <nav class="d-none d-xl-flex h-100 align-items-center justify-content-end">
+                    <ul class="list-unstyled d-flex justify-content-center justify-content-xl-end mb-0">
                         <li><a href="/" class="dm-sans-500">Witamy</a></li>
                         <li>
                             <span class="dm-sans-500">Inwestycje <i>▼</i></span>
@@ -35,6 +35,7 @@
                         <li class="header-phone me-0"><a href="tel:+48512380000" class="dm-sans-500">+48 512 380 000</a></li>
                     </ul>
                 </nav>
+                <div id="triggermenu">MENU</div>
             </div>
         </div>
     </div>

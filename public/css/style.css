@@ -1573,6 +1573,56 @@ footer #copyrights span {
     display: inline-flex;
   }
 }
+/* RWD
+================================================== */
+.closemenu {
+  width: 40px;
+  height: 40px;
+  background: #b97a5d;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border-radius: 50%;
+  display: none;
+  z-index: 999;
+}
+.closemenu:before {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  color: white;
+  font-size: 20px;
+}
+#triggermenu {
+  display: none;
+  float: right;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 15px 12px 0;
+  padding: 5px 12px;
+  transition: all 200ms linear;
+  background: #222;
+  cursor: pointer;
+}
+#triggermenu:hover {
+  background: #d8951c;
+  color: white !important;
+}
+.openmenu #triggermenu {
+  color: #f0a61f;
+}
+#triggermenu:before {
+  font-family: 'FontAwesome';
+  content: "\f0c9";
+  margin-right: 10px;
+  font-weight: normal;
+  width: 14px;
+  display: inline-block;
+}
+.openmenu #triggermenu:before {
+  content: "\f00d";
+}
 @media (max-width: 1619.98px) {
   header {
     height: 126px;
@@ -1775,6 +1825,44 @@ footer #copyrights span {
   }
   #searchForm {
     padding-bottom: 0;
+  }
+  header #triggermenu {
+    display: block;
+  }
+  .openmenu header nav {
+    display: block !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #003761 url(../images/bg.png) repeat-y center top;
+    z-index: 999;
+    top: 67px;
+  }
+  .openmenu header nav ul {
+    flex-flow: column wrap;
+  }
+  .openmenu header nav ul li {
+    text-align: center;
+    margin: 0;
+  }
+  .openmenu header nav li a,
+  .openmenu header nav li span {
+    font-size: 20px;
+  }
+  .openmenu header li ul {
+    background: #003761;
+    border: 1px solid #ff9500;
+    position: static;
+    width: 100%;
+    display: block;
+    margin-top: 13px;
+  }
+  .openmenu header li ul li {
+    padding: 5px 0;
+  }
+  .openmenu header li ul li a {
+    color: white;
   }
 }
 /* end of 1199.98 */
@@ -2022,6 +2110,17 @@ footer #copyrights span {
     font-size: 16px;
     line-height: 22px;
     margin: 0;
+  }
+  #page-home .news-card__arrow {
+    top: -20px !important;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    bottom: 0 !important;
+  }
+  #newsList {
+    padding-top: 60px;
+    padding-bottom: 0;
   }
 }
 /* end of 575.98 */
