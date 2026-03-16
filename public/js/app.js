@@ -126,15 +126,6 @@ $(document).ready(function() {
             b.preventDefault();
             $('body').toggleClass('openmenu');
         });
-        $("#megamenu-opacity").click(function (event) {
-            if ($('body').hasClass("openmenu")) {
-                $('body').removeClass("openmenu");
-            }
-            event.preventDefault();
-        });
-
-    // Lightbox
-        $('.swipebox').swipebox({useSVG: false});
 
     // Youtube
         $('iframe[src*="youtube"]').wrap("<div class='video-container'></div>");
