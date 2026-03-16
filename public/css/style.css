@@ -448,6 +448,18 @@ button:focus,
 .slick-arrow.slick-button:hover {
   border-color: #FFF;
 }
+/* Tabele
+================================================== */
+.table-striped thead th {
+  background: #353535;
+  color: white;
+}
+.table-striped thead th,
+.table thead th,
+.table-striped tbody td,
+.table tbody td {
+  padding: 15px;
+}
 /* Articles
 ================================================== */
 .page-blog article {
@@ -1067,6 +1079,19 @@ header .header-phone a:hover {
   color: orange;
 }
 .mieszkania-list-btn .list-status-3 {
+  color: red;
+}
+table .list-status {
+  font-weight: 600;
+  font-size: 21px;
+}
+table .list-status-1 {
+  color: green;
+}
+table .list-status-2 {
+  color: orange;
+}
+table .list-status-3 {
   color: red;
 }
 .mieszkania-list-icn {
