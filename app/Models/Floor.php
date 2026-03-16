@@ -44,7 +44,7 @@ class Floor extends Model
 
     public function findNext(int $investment, int $current_position, int $building = null)
     {
-        $next = $this->where('investment_id', $investment)->where('active', 1);
+        $next = $this->where('investment_id', $investment)->where('active', 1)->where('type', 1);
 
         if ($building) {
             $next->where('building_id', $building);
@@ -58,7 +58,7 @@ class Floor extends Model
 
     public function findPrev(int $investment, int $current_position, int $building = null)
     {
-        $prev = $this->where('investment_id', $investment)->where('active', 1);
+        $prev = $this->where('investment_id', $investment)->where('active', 1)->where('type', 1);
 
         if ($building) {
             $prev->where('building_id', $building);
