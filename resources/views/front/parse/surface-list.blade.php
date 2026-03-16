@@ -29,7 +29,7 @@
                         </td>
                     @else
                         <td>{{ $property->area }} m²</td>
-                        <td class="text-center">@money(($property->price_brutto / $property->area))</td>
+                        <td class="text-center">@money(($property->price_brutto / (float) str_replace(',', '.', $property->area)))</td>
                     @endif
                 @endif
                 <td class="text-center">
