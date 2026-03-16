@@ -3,7 +3,7 @@ const el = document.querySelector('.news-carousel');
 window.jQuery(el).slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: false,
+    infinite: true,
     arrows: true,
     prevArrow: $('.slick-prev-custom'),
     nextArrow: $('.slick-next-custom'),

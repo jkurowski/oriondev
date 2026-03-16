@@ -438,19 +438,19 @@ button:focus,
 .flex-wrap-nowrap {
   flex-wrap: nowrap !important;
 }
-.slick-button {
+.slick-arrow.slick-button {
   width: 70px;
   height: 70px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   transition: all 0.2s;
 }
-.slick-button:hover {
+.slick-arrow.slick-button:hover {
   border-color: #FFF;
 }
 /* Articles
 ================================================== */
-article {
+.page-blog article {
   padding: 30px;
   background: white;
   border: 1px solid #f1f1f1;
@@ -1487,9 +1487,9 @@ footer #copyrights span {
   transition: background-color 0.25s ease;
 }
 .news-card__title {
-  font-size: 36px;
+  font-size: 29px;
   font-weight: 500;
-  line-height: 44px;
+  line-height: 38px;
   margin: 25px 0 0 0;
 }
 /* Opis inwestycji
@@ -1712,6 +1712,45 @@ footer #copyrights span {
     line-height: 39px;
     font-size: 24px;
   }
+  #searchForm label {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  #searchForm button {
+    padding: 10px 0;
+    border-radius: 4px;
+  }
+  #searchForm button svg {
+    width: 32px;
+    height: 32px;
+  }
+  #hero p {
+    font-size: 34px;
+    line-height: 37px;
+    margin-left: 0;
+    padding-left: 20px;
+    border-left: 3px solid #FF9500;
+  }
+  #hero h1 {
+    font-size: 96px;
+  }
+  #hero .hero-img-sub {
+    border: 0;
+    border-bottom: 20px solid #003761;
+    border-right: 20px solid #003761;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 319px;
+  }
+  #hero .hero-button .bttn {
+    font-size: 19px;
+    padding: 22px 95px 22px 28px;
+  }
+  #hero .hero-button .bttn span {
+    width: 57px;
+    height: 57px;
+  }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
@@ -1749,6 +1788,23 @@ footer #copyrights span {
   }
   .zrealizowane h3 {
     font-size: 22px;
+  }
+  .iconbox h3 {
+    font-size: 17px;
+    margin: 15px 0;
+  }
+  #hero p {
+    font-size: 27px;
+    line-height: 30px;
+  }
+  #hero .hero-button .bttn {
+    font-size: 13px;
+    padding: 18px 84px 18px 25px;
+  }
+  #hero .hero-button .bttn span {
+    width: 47px;
+    height: 47px;
+    right: 2px;
   }
 }
 /* end of 991.98 */
@@ -1796,6 +1852,45 @@ footer #copyrights span {
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 30px !important;
+  }
+  .iconbox {
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #1c4d72;
+    background: #003761;
+    padding: 20px 20px 10px !important;
+  }
+  .iconbox img {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+  }
+  .iconbox p {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .news-card__arrow {
+    top: auto !important;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    bottom: -20px !important;
+  }
+  #hero .hero-img-sub {
+    display: none;
+  }
+  #hero p {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+  }
+  #hero h1 {
+    font-size: 64px;
+    line-height: 65px;
+  }
+  #hero .hero-button .bttn {
+    font-size: 13px;
+    padding: 18px 55px 18px 20px;
   }
 }
 /* end of 767.98 */
@@ -1848,6 +1943,38 @@ footer #copyrights span {
   }
   .zrealizowane {
     padding: 15px;
+  }
+  #searchForm label {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+  .section-header h2 {
+    font-weight: 700;
+    font-size: 26px;
+    font-style: normal;
+    margin: 10px 0;
+  }
+  #hero {
+    margin-bottom: 50px;
+  }
+  #hero .hero-button {
+    position: absolute;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+  }
+  #hero .hero-button .bttn {
+    width: 100%;
+  }
+  #hero h1 {
+    font-size: 43px;
+    line-height: 38px;
+  }
+  #hero p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
   }
 }
 /* end of 575.98 */
