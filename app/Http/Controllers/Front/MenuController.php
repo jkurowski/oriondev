@@ -28,6 +28,7 @@ class MenuController extends Controller
             'aktualnosci' => 5,
             'praca' => 7,
             'relacje-inwestorskie' => 8,
+            'polityka-prywatnosci' => 11,
         ];
 
         if (isset($pages[$uri])) {
