@@ -46,7 +46,7 @@ class InvestmentController extends Controller
                 'static_page' => 'opis-inwestycji'
             ]);
         } else {
-            return view('front.developro.completed.show', [
+            return view('front.developro.investment.show', [
                 'investment' => $investment,
                 'page' => $page
             ]);
