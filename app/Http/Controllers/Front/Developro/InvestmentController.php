@@ -45,13 +45,8 @@ class InvestmentController extends Controller
                 'page' => $page,
                 'static_page' => 'opis-inwestycji'
             ]);
-        } else if($investment->status == 2){
-            return view('front.developro.completed.show', [
-                'investment' => $investment,
-                'page' => $page
-            ]);
         } else {
-            return view('front.investments.'.$slug.'.index', [
+            return view('front.developro.completed.show', [
                 'investment' => $investment,
                 'page' => $page
             ]);
