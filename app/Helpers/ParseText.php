@@ -138,7 +138,7 @@ if (! function_exists('makeFloorSurfaceList')) {
         $properties = Property::whereIn('status', [1, 2])
             ->where('floor_id', $floorId)
             ->whereIn('type', $types)
-            ->orderBy('number_order')
+            ->orderBy('status')
             ->get();
 
         return view('front.parse.surface-list', [
