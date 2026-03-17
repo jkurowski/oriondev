@@ -16,7 +16,7 @@
                             <ul class="mb-0 list-unstyled submenu">
                                 <li><a href="{{ route('front.developro.show', 'duo-park') }}">Inwestycje aktualne</a></li>
                                 <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-zrealizowane']) }}">Inwestycje zrealizowane</a></li>
-                                <li class="d-none"><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-planowane']) }}">Inwestycje planowane</a></li>
+                                <li><a href="{{ route('front.developro.show', 'krolewska-26') }}">Inwestycje planowane</a></li>
                             </ul>
                         </li>
                         <li><a href="{{ route('front.menu.show', ['uri' => 'relacje-inwestorskie']) }}" class="dm-sans-500">Relacje inwestorskie</a></li>

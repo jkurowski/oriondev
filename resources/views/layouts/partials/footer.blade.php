@@ -28,7 +28,7 @@
                 <ul class="mb-0 list-unstyled footer-menu">
                     <li><a href="/">Strona główna</a></li>
                     <li><a href="{{ route('front.developro.show', 'duo-park') }}">Inwestycje aktualne</a></li>
-                    <li class="d-none"><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-planowane']) }}">Inwestycje planowane</a></li>
+                    <li><a href="{{ route('front.developro.show', 'krolewska-26') }}">Inwestycje planowane</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'inwestycje-zrealizowane']) }}">Inwestycje zrealizowane</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'relacje-inwestorskie']) }}">Relacje inwestorskie</a></li>
                     <li><a href="{{ route('front.menu.show', ['uri' => 'kontakt']) }}">Kontakt</a></li>
