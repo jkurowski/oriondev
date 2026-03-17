@@ -18,12 +18,14 @@
     <div id="page">
         <div class="container">
             <div class="row">
+                @if($investment->status == 1)
                 <div class="col-2">
                     <div class="sidemenu">
                         @include('front.developro.investment_shared.menu')
                     </div>
                 </div>
-                <div class="col-10">
+                @endif
+                <div class="@if($investment->status == 1) col-10 @else col-12 @endif">
                     <div class="row ps-5">
                         <div class="col-6 pe-5 d-flex align-items-center justify-content-center">
                             <div>
