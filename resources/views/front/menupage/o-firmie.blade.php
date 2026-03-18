@@ -39,7 +39,7 @@
                             <span class="section-header-subtitle dm-sans-400">
                                 <i class="subtitle-left"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M0.527588 0V9.49634H8.96878" stroke="#FF9500" stroke-width="1"/></svg></i>
                                 <i class="subtitle-right"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M8.44116 10.0239L8.44116 0.527584L-3.06411e-05 0.527583" stroke="#FF9500" stroke-width="1"/></svg></i>
-                                HASŁO
+                                TWORZYMY WARTOŚĆ, KTÓRA ZOSTAJE
                             </span>
                             <h2 class="big">Działalność developerska</h2>
                         </div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-end align-items-center mt-5 mt-lg-0">
-                    <img src="{{ asset('images/kariera.webp') }}" alt="" class="img-rounded">
+                    <img src="{{ asset('images/o-firmie-1.jpg') }}" alt="" class="img-rounded" width="555" height="555">
                 </div>
             </div>
         </div>
@@ -176,9 +176,9 @@
                             <span class="section-header-subtitle dm-sans-400">
                                 <i class="subtitle-left"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M0.527588 0V9.49634H8.96878" stroke="#FF9500" stroke-width="1"/></svg></i>
                                 <i class="subtitle-right"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M8.44116 10.0239L8.44116 0.527584L-3.06411e-05 0.527583" stroke="#FF9500" stroke-width="1"/></svg></i>
-                                HASŁO
+                                ARCHITEKTURA KOMFORTU I JAKOŚCI
                             </span>
-                            <h2 class="big">Działalność developerska</h2>
+                            <h2 class="big">Tworzymy przestrzeń, w której chce się żyć</h2>
                         </div>
                         <p>Działalność developerską rozpoczęli mając już doświadczenie w obsłudze klientów poszukujących powierzchni mieszkalnych zarówno na rynku pierwotnym jak i wtórnym. Obecnie firma specjalizuje się w prowadzeniu inwestycji mieszkaniowych.</p>
                         <p>&nbsp;</p>
@@ -186,7 +186,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-start align-items-center mt-5 mt-lg-0">
-                    <img src="{{ asset('images/kariera.webp') }}" alt="" class="img-rounded">
+                    <img src="{{ asset('images/o-firmie-2.jpg') }}" alt="" class="img-rounded" width="555" height="555">
                 </div>
             </div>
         </div>

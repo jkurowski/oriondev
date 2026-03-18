@@ -54,8 +54,13 @@ $('.apartament-slider__slider-nav').slick({
 });
 
 function setCarouselOffset() {
-    const containerLeft = document.querySelector('.container').getBoundingClientRect().left;
-    document.querySelector('.news-carousel-wrapper').style.paddingLeft = containerLeft + 'px';
+    const container = document.querySelector('.container');
+    const carousel = document.querySelector('.news-carousel-wrapper');
+
+    if (!container || !carousel) return;
+
+    const containerLeft = container.getBoundingClientRect().left;
+    carousel.style.paddingLeft = containerLeft + 'px';
 }
 
 setCarouselOffset();
