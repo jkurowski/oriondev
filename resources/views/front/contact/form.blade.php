@@ -137,11 +137,12 @@
         }
 
         @if (session('success') || session('warning') || $errors->any())
-        $(window).load(function() {
+        $(window).on('load', function() {
             const aboveHeight = $('header').outerHeight();
+
             $('html, body').stop().animate({
-                scrollTop: $('.validateForm').offset().top-aboveHeight
-            }, 1500, 'easeInOutExpo');
+                scrollTop: $('.validateForm').offset().top - aboveHeight
+            }, 1500, 'swing');
         });
         @endif
     </script>
