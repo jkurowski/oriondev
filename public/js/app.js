@@ -146,7 +146,7 @@ $(document).ready(function() {
         });
 
     // Lightbox
-        $( '.swipebox' ).swipebox({useSVG : false});
+        //$( '.swipebox' ).swipebox({useSVG : false});
 
     // Youtube
         $('iframe[src*="youtube"]').wrap("<div class='video-container'></div>");
