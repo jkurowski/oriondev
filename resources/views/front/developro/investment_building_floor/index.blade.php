@@ -126,10 +126,7 @@
     <!-- FORM -->
     <div class="pt-5 pt-xxl-6 pb-5 pb-xxl-0">
         @include('front.contact.form', [
-            'pageTitle' => $investment->name,
-            'investmentName' => $investment->name,
-            'investmentId' => $investment->id,
-            'emailAddress' => $investment->office_emails,
+            'page_name' => $investment->name,
             'back' => true
         ])
     </div>

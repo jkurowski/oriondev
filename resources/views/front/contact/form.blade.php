@@ -1,6 +1,7 @@
 @props([
     'page_name' => '',
     'obligation' => null,
+    'property' => '',
     'rules' => []
 ])
 <section id="contactForm">
@@ -21,7 +22,13 @@
                     <h2 class="big">Napisz do nas!</h2>
                 </div>
 
-                <form action="{{ route('front.contact.send') }}" class="row mt-3 mt-xxl-5 validateForm" method="POST" id="contact-form">
+                @php
+                    $action = $property
+                        ? route('front.contact.property', $property)
+                        : route('front.contact.send');
+                @endphp
+
+                <form action="{{ $action }}" class="row mt-3 mt-xxl-5 validateForm" method="POST" id="contact-form">
                     {{ csrf_field() }}
                     <div class="col-12">
                         @if (session('success'))
@@ -106,7 +113,7 @@
                     @endforeach
 
                     <div class="col-12 mt-5">
-                       <input name="form_page" type="hidden" value="{{ $page_name }}">
+                       <input name="page" type="hidden" value="{{ $page_name }}">
                         <script type="text/javascript">
                             @if(settings()->get("recaptcha_site_key") && settings()->get("recaptcha_secret_key"))
                             document.write("<button type=\"submit\" class=\"bttn bttn-icon g-recaptcha\" data-sitekey=\"{{ settings()->get("recaptcha_site_key") }}\" data-callback=\"onRecaptchaSuccess\" data-action=\"submitContact\">Wyślij wiadomość <span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><g clip-path=\"url(#sendIcon)\"><path d=\"M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z\"/></g><defs><clipPath id=\"sendIcon\"><rect width=\"12.0465\" height=\"12.0465\" transform=\"translate(0 8.51855) rotate(-45)\"/></clipPath></defs></svg></span></button>");
