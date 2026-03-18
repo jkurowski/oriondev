@@ -102,6 +102,9 @@
                 <div class="col-12 text-center">
                     <h3>Poniżej prezentujemy kilka przykładowych<br> wizualizacji wykończenia mieszkania.</h3>
                 </div>
+                <div class="col-12 mt-4">
+                    {!! parse_text("[galeria=gallery]4[/galeria]") !!}
+                </div>
             </div>
         </div>
     </div>
