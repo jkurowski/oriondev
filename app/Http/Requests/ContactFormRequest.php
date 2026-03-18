@@ -43,11 +43,20 @@ class ContactFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'To pole jest wymagane',
-            'email.required' => 'To pole jest wymagane',
-            'email.email' => 'Nieprawidłowy adres e-mail',
-            'message.required' => 'To pole jest wymagane',
-            'phone.required' => 'To pole jest wymagane'
+            'name.required' => 'Podaj imię',
+            'email.required' => 'Podaj adres e-mail',
+            'email.email' => 'Podaj poprawny adres e-mail',
+            'message.required' => 'Wpisz wiadomość',
+            'phone.required' => 'Podaj numer telefonu',
+            'g-recaptcha-response.required' => 'Potwierdź, że nie jesteś robotem',
+
+            'rule_1.integer' => 'Nieprawidłowa wartość',
+            'rule_2.integer' => 'Nieprawidłowa wartość',
+            'rule_6.integer' => 'Nieprawidłowa wartość',
+            'investment_id.integer' => 'Nieprawidłowa wartość',
+
+            'investment_name.max' => 'Nazwa inwestycji może mieć maksymalnie 255 znaków',
+            'property_name.max' => 'Nazwa nieruchomości może mieć maksymalnie 255 znaków',
         ];
     }
 }
