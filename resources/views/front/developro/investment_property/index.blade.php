@@ -1,9 +1,11 @@
 @extends('layouts.page', ['body_class' => 'position-relative', 'body_id' => 'page-karta-mieszkania'])
 
-@section('meta_title', $page->title.' - '.$investment->name.' - '.$property->name)
-@section('seo_title', $page->meta_title)
-@section('seo_description', $page->meta_description)
-@section('seo_robots', $page->meta_robots)
+@isset($page)
+    @section('meta_title', $page->title.' - '.$investment->name.' - '.$property->name)
+    @section('seo_title', $page->meta_title)
+    @section('seo_description', $page->meta_description)
+    @section('seo_robots', $page->meta_robots)
+@endisset
 
 @section('content')
     <!-- MAIN SECTION -->
@@ -17,14 +19,14 @@
 
     <div id="page">
         <!-- NAWIGACJA -->
-        <div id="planNav" class="container mb-5">
+        <div id="planNav" class="container mb-3 mb-sm-5">
             <div class="row">
-                <div class="col-4 d-flex justify-content-start align-items-center">
+                <div class="col-12 col-sm-4 mb-2 mb-sm-0">
                     <x-nav-property-link :property="$prev" label="Poprzednie" direction="prev" />
                 </div>
-                <div class="col-4 d-flex justify-content-center align-items-center">
+                <div class="col-12 col-sm-4 text-center order-first order-sm-0 mb-2 mb-sm-0">
                     @if($investment->type == 1)
-                        <a href="{{route('front.developro.building.floor', [$investment->slug, $building, 'buildingSlug' => Str::slug($building->name), $floor, 'floorSlug' => Str::slug($floor->name)])}}" class="next-prev__link d-flex align-items-center justify-content-center gap-2">
+                        <a href="{{route('front.developro.building.floor', [$investment->slug, $building, 'buildingSlug' => Str::slug($building->name), $floor, 'floorSlug' => Str::slug($floor->name)])}}" class="next-prev__link d-flex align-items-center justify-content-center gap-2 w-100 w-sm-auto justify-content-center">
                             Plan piętra
                         </a>
                     @endif
@@ -34,7 +36,7 @@
                         </a>
                     @endif
                 </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="col-12 col-sm-4 text-end">
                     <x-nav-property-link :property="$next" label="Następne" direction="next" />
                 </div>
             </div>
@@ -45,13 +47,13 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-12 col-xl-8">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-lg-4 mb-2 mb-lg-0">
                             <div class="page-entry-karta__item">
                                 <x-icons.icon-area/>
                                 <span>Powierzchnia: {{$property->area}} m<sup>2</sup></span>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-lg-4 mb-2 mb-lg-0">
                             <div class="page-entry-karta__item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36.343" height="36.343" viewBox="0 0 36.343 36.343">
                                     <g id="pokoje-icn" transform="translate(0.75 0.75)">
@@ -65,7 +67,7 @@
                                 <span>Pokoje: {{$property->rooms}}</span>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-lg-4">
                             <div class="page-entry-karta__item">
                                 <x-icons.icon-floor/>
                                 <span>Piętro: {{$floor->number}}</span>
@@ -78,7 +80,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-xl-8">
                     <div class="row">
-                        <div class="col-12 col-sm-5 d-flex flex-column align-items-start justify-content-start">
+                        <div class="col-12 col-lg-5 d-flex flex-column align-items-start justify-content-start">
 
                             @if($property->status == 1)
                                 @if($property->highlighted && $property->promotion_price)
@@ -228,7 +230,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-7 mt-4 mt-sm-0 ps-4">
+                        <div class="col-12 col-lg-7 mt-4 mt-lg-0 ps-2 ps-lg-4">
                             @if($property->file)
                                 <div class="room-plan-img">
                                     <a href="{{ asset('/investment/property/'.$property->file) }}" data-lightbox="property" rel="property" class="d-block m-auto">

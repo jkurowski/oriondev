@@ -1,9 +1,11 @@
 @extends('layouts.page', ['body_class' => 'position-relative', 'body_id' => 'page-mieszkania'])
 
-@section('meta_title', $page->title.' - '.$investment->name.' - Plan inwestycji')
-@section('seo_title', $page->meta_title)
-@section('seo_description', $page->meta_description)
-@section('seo_robots', $page->meta_robots)
+@isset($page)
+    @section('meta_title', $page->title.' - '.$investment->name.' - Plan inwestycji')
+    @section('seo_title', $page->meta_title)
+    @section('seo_description', $page->meta_description)
+    @section('seo_robots', $page->meta_robots)
+@endisset
 
 @section('content')
     <div class="container-fluid mieszkania-submenu">
@@ -17,12 +19,12 @@
     <div id="page">
         <div class="container">
             <div class="row">
-                <div class="col-2">
-                    <div class="sidemenu sticky-top">
+                <div class="col-12 col-lg-3 col-xxl-2">
+                    <div class="sidemenu sticky-top d-none d-lg-block">
                         @include('front.developro.investment_shared.menu')
                     </div>
                 </div>
-                <div class="col-10">
+                <div class="col-12 col-lg-9 col-xxl-10">
                     @if($investment->plan)
                         <div id="plan-holder">
                             <img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan" class="w-100 h-100 object-fit-cover rounded">

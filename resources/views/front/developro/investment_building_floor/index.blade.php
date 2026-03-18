@@ -1,9 +1,11 @@
 @extends('layouts.page', ['body_class' => 'position-relative', 'body_id' => 'page-mieszkania'])
 
-@section('meta_title', $page->title.' - '.$investment->name.' - '.$building->name.' - '.$floor->name)
-@section('seo_title', $page->meta_title)
-@section('seo_description', $page->meta_description)
-@section('seo_robots', $page->meta_robots)
+@isset($page)
+    @section('meta_title', $page->title.' - '.$investment->name.' - '.$building->name.' - '.$floor->name)
+    @section('seo_title', $page->meta_title)
+    @section('seo_description', $page->meta_description)
+    @section('seo_robots', $page->meta_robots)
+@endisset
 
 @section('content')
     <div class="container-fluid mieszkania-submenu">
@@ -17,29 +19,29 @@
     <div id="page">
         <div class="container">
             <div class="row">
-                <div class="col-2">
-                    <div class="sidemenu sticky-top">
+                <div class="col-12 col-lg-3 col-xxl-2">
+                    <div class="sidemenu sticky-top d-none d-lg-block">
                         @include('front.developro.investment_shared.menu')
                     </div>
                 </div>
-                <div class="col-10">
+                <div class="col-12 col-lg-9 col-xxl-10">
                     <div class="container mb-3">
                         <div id="planNav" class="row">
-                            <div class="col-6 col-sm-4">
+                            <div class="col-12 col-sm-4 mb-2 mb-sm-0">
                                 @if($prev_floor)
-                                    <a href="{{route('front.developro.building.floor', [$investment->slug, $building, $prev_floor, 'floorSlug' => Str::slug($prev_floor->name)])}}" class="custom-button z-2">
+                                    <a href="{{route('front.developro.building.floor', [$investment->slug, $building, $prev_floor, 'floorSlug' => Str::slug($prev_floor->name)])}}" class="custom-button z-2 w-100 w-sm-auto justify-content-center">
                                         Piętro niżej
                                     </a>
                                 @endif
                             </div>
 
-                            <div class="col-12 col-sm-4 text-center order-first order-sm-0">
-                                <a href="{{route('front.developro.building', [$investment->slug, $building])}}" class="custom-button z-2" style="--bs-btn-hover-color: var(--bs-white);">Plan budunku</a>
+                            <div class="col-12 col-sm-4 text-center order-first order-sm-0 mb-2 mb-sm-0">
+                                <a href="{{route('front.developro.building', [$investment->slug, $building])}}" class="custom-button z-2 w-100 w-sm-auto justify-content-center" style="--bs-btn-hover-color: var(--bs-white);">Plan budunku</a>
                             </div>
 
-                            <div class="col-6 col-sm-4 text-end">
+                            <div class="col-12 col-sm-4 text-end">
                                 @if($next_floor)
-                                    <a href="{{route('front.developro.building.floor', [$investment->slug, $building, $next_floor, 'floorSlug' => Str::slug($next_floor->name)])}}" class="custom-button z-2">
+                                    <a href="{{route('front.developro.building.floor', [$investment->slug, $building, $next_floor, 'floorSlug' => Str::slug($next_floor->name)])}}" class="custom-button z-2 w-100 w-sm-auto justify-content-center">
                                         Piętro wyżej
                                     </a>
                                 @endif
