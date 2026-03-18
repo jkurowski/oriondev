@@ -120,7 +120,7 @@ $(document).ready(function() {
         }
 
 
-    var lightbox = $('.mieszkanie-rzut a').simpleLightbox();
+    var lightbox = $('.room-plan-img a, .swipebox').simpleLightbox();
 
     // Tooltip
         $('area[title]').each(function () {
