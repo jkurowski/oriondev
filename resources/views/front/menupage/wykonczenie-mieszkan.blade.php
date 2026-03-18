@@ -24,7 +24,7 @@
                             <span class="section-header-subtitle dm-sans-400">
                                 <i class="subtitle-left"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M0.527588 0V9.49634H8.96878" stroke="#FF9500" stroke-width="1"/></svg></i>
                                 <i class="subtitle-right"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M8.44116 10.0239L8.44116 0.527584L-3.06411e-05 0.527583" stroke="#FF9500" stroke-width="1"/></svg></i>
-                                Kompleksowe wykończenie
+                                KOMPLEKSOWE WYKOŃCZENIE
                             </span>
                             <h2 class="big">Wykończ swoje mieszkanie bez stresu</h2>
                         </div>
@@ -84,7 +84,7 @@
                             <span class="section-header-subtitle dm-sans-400">
                                 <i class="subtitle-left"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M0.527588 0V9.49634H8.96878" stroke="#FF9500" stroke-width="1"/></svg></i>
                                 <i class="subtitle-right"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 9 11" fill="none"><path d="M8.44116 10.0239L8.44116 0.527584L-3.06411e-05 0.527583" stroke="#FF9500" stroke-width="1"/></svg></i>
-                                Mieszkanie pokazowe
+                                MIESZKANIE POKAZOWE
                             </span>
                             <h2 class="big">Zobacz standard wykończenia na żywo</h2>
                         </div>
