@@ -47,9 +47,9 @@
 
                     <div class="col-12 col-xxl-4">
                         <div class="form-floating mb-3">
-                            <input type="text" class="validate[required] form-control @error('form_name') is-invalid @enderror" id="floatingName" placeholder="Imię i nazwisko" name="form_name" value="{{ old('form_name') }}">
+                            <input type="text" class="validate[required] form-control @error('name') is-invalid @enderror" id="floatingName" placeholder="Imię i nazwisko" name="name" value="{{ old('name') }}">
                             <label for="floatingName">Imię i nazwisko</label>
-                            @error('form_name')
+                            @error('name')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
@@ -57,9 +57,9 @@
 
                     <div class="col-12 col-sm-6 col-xxl-4">
                         <div class="form-floating mb-3">
-                            <input type="tel" class="form-control @error('form_phone') is-invalid @enderror" id="floatingPhone" placeholder="Numer telefonu" name="form_phone" value="{{ old('form_phone') }}">
+                            <input type="tel" class="form-control @error('phone') is-invalid @enderror" id="floatingPhone" placeholder="Numer telefonu" name="phone" value="{{ old('phone') }}">
                             <label for="floatingPhone">Numer telefonu</label>
-                            @error('form_phone')
+                            @error('phone')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
@@ -67,9 +67,9 @@
 
                     <div class="col-12 col-sm-6 col-xxl-4">
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control @error('form_email') is-invalid @enderror" id="floatingEmail" placeholder="E-mail" name="form_email" value="{{ old('form_email') }}">
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" id="floatingEmail" placeholder="E-mail" name="email" value="{{ old('email') }}">
                             <label for="floatingEmail">E-mail</label>
-                            @error('form_email')
+                            @error('email')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
@@ -77,9 +77,9 @@
 
                     <div class="col-12 mt-2">
                         <div class="form-floating">
-                            <textarea class="form-control @error('form_message') is-invalid @enderror" placeholder="Opisz swoje oczekiwania wobec nowego mieszkania – my zajmiemy się resztą" id="floatingTextarea" name="form_message">{{ old('form_message') }}</textarea>
+                            <textarea class="form-control @error('message') is-invalid @enderror" placeholder="Opisz swoje oczekiwania wobec nowego mieszkania – my zajmiemy się resztą" id="floatingTextarea" name="message">{{ old('message') }}</textarea>
                             <label for="floatingTextarea">Treść wiadomości</label>
-                            @error('form_message')
+                            @error('message')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
