@@ -61,7 +61,6 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
     Route::post('/kontakt', 'ContactController@send')->name('contact.send');
 
     Route::get('/', 'IndexController@index')->name('index');
-    Route::get('/dzialki', 'MenuController@dzialki')->name('dzialki');
     Route::get('/o-nas', 'MenuController@onas')->name('o-nas');
 
 //
@@ -85,14 +84,14 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 //        Route::get('/unsubscribe/{hash}', 'Property\NotificationController@unsubscribe')->name('properties.notifications.unsubscribe');
 //
         Route::get('/inwestycje-w-sprzedazy', 'IndexController@index')->name('current');
-        Route::get('/domy', 'IndexController@houses')->name('houses');
-        Route::get('/wyniki-wyszukiwania', 'SearchController@index')->name('search.index');
+        //Route::get('/domy', 'IndexController@houses')->name('houses');
+        //Route::get('/wyniki-wyszukiwania', 'SearchController@index')->name('search.index');
 //
         Route::get('/inwestycje-zrealizowane', 'CompletedController@index')->name('completed');
-        Route::get('/inwestycja-zrealizowana/{slug}', 'CompletedController@show')->name('completed.show');
+        //Route::get('/inwestycja-zrealizowana/{slug}', 'CompletedController@show')->name('completed.show');
 
-        Route::get('/wynajem', 'Rent\IndexController@index')->name('rent');
-        Route::get('/wynajem/{slug}', 'Rent\IndexController@show')->name('rent.show');
+        //Route::get('/wynajem', 'Rent\IndexController@index')->name('rent');
+        //Route::get('/wynajem/{slug}', 'Rent\IndexController@show')->name('rent.show');
 
         Route::get('/i/{slug}/p/{pageSlug}', 'Page\IndexController@show')->name('page');
 
@@ -100,7 +99,7 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 //        Route::get('/i/{slug}/dziennik-inwestycji/{article}', 'Article\IndexController@show')->name('investment.news.show');
 //
 //        Route::get('/i/{slug}/galeria', 'Gallery\IndexController@index')->name('investment.gallery');
-        Route::get('/i/{slug}/kontakt', 'Contact\IndexController@index')->name('contact');
+        //Route::get('/i/{slug}/kontakt', 'Contact\IndexController@index')->name('contact');
 //
         Route::get('/i/{slug}', 'InvestmentController@show')->name('show');
         Route::get('/i/{slug}/plan-inwestycji', 'InvestmentPlanController@index')->name('plan');
@@ -118,11 +117,15 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 //        #Inwestycja osiedlowa - budynek - pietro
         Route::get('/i/{slug}/b/{building}/{floor},{floorSlug}', 'InvestmentBuildingFloorController@index')->name('building.floor');
 //
+
+
 //        #Inwestycja osiedlowa - budynek - pietro - mieszkanie
         Route::get('/i/{slug}/b/{building},{buildingSlug}/{floor},{floorSlug}/{property},{propertySlug},{propertyRooms},{propertyArea}', 'InvestmentBuildingPropertyController@index')->name('building.floor.property');
 // i/lipa-piotrowska/b/60/budynek-a4-sprzedany,393/parter,4313,mieszkanie-a43,3-pokoje?60.16-m2
+
+
 //        // Inwestycja domkowa
-        Route::get('/{slug}/d/{property},{propertySlug},{propertyArea}', 'InvestmentHouseController@index')->name('house');
+        //Route::get('/{slug}/d/{property},{propertySlug},{propertyArea}', 'InvestmentHouseController@index')->name('house');
 //
 //        //Historia cen
 //        Route::get('/historia/{property}', 'History\IndexController@show')->name('history');

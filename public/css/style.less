@@ -1114,6 +1114,14 @@ table {
     }
 }
 
+.form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select ~ label::after {
+
+    display: none;
+}
+
 /* Karta mieszkania
 ================================================== */
 .page-entry-karta__info-item {
