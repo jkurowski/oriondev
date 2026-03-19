@@ -76,7 +76,7 @@
                                 <li><a class="dropdown-item active" href="#" data-value="">Wszystkie</a></li>
                                 <li><a class="dropdown-item" href="#" data-value="0-40">0–40 m²</a></li>
                                 <li><a class="dropdown-item" href="#" data-value="40-60">40–60 m²</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="60+">60+ m²</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="60-99999">60+ m²</a></li>
                             </ul>
                         </div>
                         <input type="hidden" name="area" id="areaInput">
@@ -115,9 +115,9 @@
                             </button>
                             <ul class="dropdown-menu w-100">
                                 <li><a class="dropdown-item active" href="#" data-value="">Wszystkie</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="0-500">do 500k</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="500-800">500–800k</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="800+">800k+</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="0-500000">do 500k</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="500000-800000">500–800k</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="800000-99999999">800k+</a></li>
                             </ul>
                         </div>
                         <input type="hidden" name="price" id="priceInput">
