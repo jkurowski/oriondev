@@ -397,3 +397,27 @@
         </div>
     </main>
 @endsection
+@push('scripts')
+    <script>
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('.dropdown-toggle');
+            const input = dropdown.parentElement.querySelector('input[type="hidden"]');
+
+            dropdown.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    // tekst do buttona
+                    button.textContent = item.textContent;
+
+                    // wartość do inputa
+                    input.value = item.dataset.value || '';
+
+                    // aktywna klasa (opcjonalnie)
+                    dropdown.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                });
+            });
+        });
+    </script>
+@endpush

@@ -1146,6 +1146,7 @@ header .header-phone a:hover {
 }
 #searchForm .dropdown-item {
   color: #fff;
+  font-size: 16px;
 }
 #searchForm .dropdown-item:hover,
 #searchForm .dropdown-item.active {
