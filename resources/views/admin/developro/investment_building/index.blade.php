@@ -27,7 +27,7 @@
                         </tr>
                         </thead>
                         <tbody class="content">
-                        @foreach ($investment->buildings as $index => $p)
+                        @foreach ($investment->allBuildings as $index => $p)
                             <tr id="recordsArray_{{ $p->id }}">
                                 <th class="position" scope="row">{{ $index+1 }}</th>
                                 <td><a href="{{route('admin.developro.investment.building.floors.index', [$investment, $p])}}">{{ $p->name }}</a></td>
