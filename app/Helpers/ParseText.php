@@ -102,6 +102,9 @@ if (! function_exists('makeSurfaceList')) {
         $properties = Property::whereIn('status', [1, 2])
             ->where('investment_id', $investmentId)
             ->whereIn('type', $types)
+            ->whereHas('building', function ($q) {
+                $q->where('active', 1);
+            })
             ->orderBy('status')
             ->get();
 
