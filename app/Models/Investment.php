@@ -264,7 +264,7 @@ class Investment extends Model
      */
     public function pages(): HasMany
     {
-        return $this->hasMany('App\Models\InvestmentPage')->orderBy('sort', "ASC");
+        return $this->hasMany('App\Models\InvestmentPage')->orderBy('sort', "ASC")->where('active', 1);
     }
 
     /**
