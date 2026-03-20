@@ -83,12 +83,6 @@
                                         <span class="bullet bullet-dot"></span>
                                     </span> Ustawienia</a>
                             </li>
-                            <li {{ Request::routeIs('admin.charity.*') ? 'class=active' : '' }}>
-                                <a href="{{ route('admin.charity.index') }}">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span> Działalność charytatywna</a>
-                            </li>
                             <li class="d-none">
                                 <a href="">
                                     <span class="menu-bullet">
@@ -104,13 +98,6 @@
                             <i class='fe-settings ms-auto with-hover'></i>
                         </a>
                         <ul class="sub-menu">
-                            <li class="{{ Request::routeIs('admin.city.*') ? 'active' : '' }}">
-                                <a href="{{ route('admin.city.index') }}">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span> Lokalizacje inwestycji
-                                </a>
-                            </li>
                             <li class="{{ Request::routeIs('admin.developro.*') ? 'active' : '' }}">
                                 <a href="{{ route('admin.developro.investment.index') }}">
                                     <span class="menu-bullet">
