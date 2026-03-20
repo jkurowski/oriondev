@@ -36,7 +36,6 @@
                                 <td class="text-center">{!! status($item->status) !!}</td>
                                 <td class="option-120">
                                     <div class="btn-group">
-                                        <a href="https://developers.facebook.com/tools/debug/?q={{route('front.aktualnosci.show', ['aktualnosci' => $item])}}" target="_blank" class="btn action-button me-3" data-bs-toggle="tooltip" data-placement="top" data-bs-title="Facebook sharing debugger"><i class="fe-radio"></i></a>
                                         <a href="{{route('admin.article.edit', $item->id)}}" class="btn action-button me-1" data-bs-toggle="tooltip" data-placement="top" data-bs-title="Edytuj wpis"><i class="fe-edit"></i></a>
                                         <form method="POST" action="{{route('admin.article.destroy', $item->id)}}">
                                             {{ csrf_field() }}
