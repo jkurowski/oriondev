@@ -32,8 +32,8 @@ class IndexController extends Controller
         $extIdent = bin2hex(random_bytes(18));
         $dataset->appendChild($doc->createElement("extIdent", $extIdent));
 
-        $company = "Triada Dom Wachowiak Śliwiak Spółka Jawna";
-        $year = 2025;
+        $company = "Orion Development Group Sp. z o.o.";
+        $year = 2026;
 
         // title
         $title = $doc->createElement("title");
