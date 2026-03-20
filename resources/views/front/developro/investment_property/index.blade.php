@@ -223,7 +223,7 @@
                                     </div>
                                     <div class="col-12">
                                         @if($investment->file_brochure)
-                                            <a href="{{ asset('investment/brochure/'.$investment->file_brochure) }}" class="custom-button mt-0mt-md-10" target="_blank">Prospekt informacyjny</a>
+                                            <a href="{{ asset('investment/brochure/'.$investment->file_brochure) }}" class="bttn bttn-icon bttn-white mt-3" target="_blank">Prospekt informacyjny <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><g clip-path="url(#sendIcon)"><path d="M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z"></path></g><defs><clipPath id="sendIcon"><rect width="12.0465" height="12.0465" transform="translate(0 8.51855) rotate(-45)"></rect></clipPath></defs></svg></span></a>
                                         @endif
                                     </div>
                                 </div>
