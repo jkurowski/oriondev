@@ -8,7 +8,7 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ settings()->get("page_description") }}">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="{{ settings()->get("page_robots") }}">
     <meta name="author" content="{{ settings()->get("page_author") }}">
 
     <!-- CSRF Token -->
