@@ -85,6 +85,15 @@ class Property extends Model
         'is_investment_property'
     ];
 
+    protected $casts = [
+        'price_brutto' => 'decimal:2',
+        'promotion_price' => 'decimal:2',
+        'area' => 'decimal:2',
+        'highlighted' => 'boolean',
+        'active' => 'boolean',
+        'promotion_price_show' => 'boolean',
+    ];
+
     public function priceHistory($date = '2025-09-11')
     {
         return $this->hasMany(PriceHistory::class, 'real_estate_id')

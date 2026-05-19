@@ -70,7 +70,7 @@ class PropertyObserver
         // Handle status change
         if ($property->isDirty('status')) {
             $newStatus = $property->status;
-            if ($originalStatus !== $newStatus) {
+            if ($originalStatus != $newStatus) {
                 $message .= sprintf('<br>Status: "<b>%s</b>" -> "<b>%s</b>"', roomStatus($originalStatus), roomStatus($newStatus));
                 $statusChanged = true;
             }
@@ -142,7 +142,7 @@ class PropertyObserver
                 $priceChanged = true;
 
                 // ✅ Case 3: Regular price change (no promotion involved)
-            } elseif ($originalPrice !== $newPrice) {
+            } elseif ($originalPrice != $newPrice) {
                 $message .= sprintf(
                     '<br>Cena: "<b>%s zł</b>" -> "<b>%s zł</b>".',
                     ($originalPrice !== null && $originalPrice !== '')
@@ -164,35 +164,11 @@ class PropertyObserver
                 $priceChanged = true;
             }
         }
-//        if ($property->isDirty('price_brutto')) {
-//            $newPrice = $property->price_brutto;
-//            if ($originalPrice !== $newPrice) {
-//                $message .= sprintf('<br>Cena: "<b>%s zł</b>" -> "<b>%s zł</b>".',
-//                    ($originalPrice !== null && $originalPrice !== '')
-//                        ? number_format($originalPrice, 0, '.', ' ')
-//                        : 'brak',
-//                    number_format($newPrice, 0, '.', ' ')
-//                );
-//
-//                $originalPrice = is_numeric($originalPrice) ? $originalPrice : 0;
-//
-//                PropertyPrice::create([
-//                    'property_id' => $property->id,
-//                    'price_brutto' => $originalPrice,
-//                    'new_price_brutto' => $newPrice,
-//                    'area' => $property->area,
-//                    'changed_at' => now(),
-//                    'changed_by' => Auth::id(),
-//                ]);
-//
-//                $priceChanged = true;
-//            }
-//        }
 
         // Handle area change
         if ($property->isDirty('area')) {
             $newArea = $property->area;
-            if ($originalArea !== $newArea) {
+            if ($originalArea != $newArea) {
                 $message .= sprintf('<br>Powierzchnia: "<b>%s m2</b>" -> "<b>%s m2</b>"', $originalArea, $newArea);
                 $areaChanged = true;
             }
