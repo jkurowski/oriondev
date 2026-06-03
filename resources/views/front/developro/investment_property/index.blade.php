@@ -106,6 +106,13 @@
                                         <span>Cena</span>
                                         <span><b>@money($property->price_brutto)</b></span>
                                     </div>
+                                        <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-end align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through text-muted @endif">
+                                            @if($property->priceHistory->count() > 0 && $property->status == 1 && $investment->show_pricehistory)
+                                                <div>
+                                                    <button type="button" class="custom-button mt-0mt-md-10" data-bs-toggle="modal" data-bs-target="#priceHistoryModal">Historia ceny</button>
+                                                </div>
+                                            @endif
+                                    </div>
                                 @endif
 
                                 @php
@@ -202,11 +209,6 @@
                                 </div>
                             @endif
 
-                            @if($property->priceHistory->count() > 0 && $property->status == 1 && $investment->show_pricehistory)
-                                <div>
-                                    <button type="button" class="custom-button mt-0mt-md-10" data-bs-toggle="modal" data-bs-target="#priceHistoryModal">Historia ceny</button>
-                                </div>
-                            @endif
                             <div class="container-fluid p-0">
                                 <div class="row">
                                     <div class="col-12">
@@ -276,71 +278,72 @@
 
     <!-- END -> MAIN SECTION -->
     @if($property->priceHistory->count() > 0 && $property->status == 1 && $investment->show_pricehistory)
-    <div class="modal fade" id="priceHistoryModal" tabindex="-1" aria-labelledby="priceHistoryModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="priceHistoryModalLabel">Historia ceny: {{ $property->name }}</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="row">
-                        <div class="col-12">
-                            <table class="table m-0">
-                                <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Stara cena</th>
-                                    <th>Nowa cena</th>
-                                    <th>Data zmiany</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($property->priceHistory as $history)
+        <div class="modal fade" id="priceHistoryModal" tabindex="-1" aria-labelledby="priceHistoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="priceHistoryModalLabel">Historia ceny: {{ $property->name }}</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table m-0">
+                                    <thead>
                                     <tr>
-                                        <td>
-                                            @if($history->price_before_gross < $history->price_gross)
-                                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                                     fill="none" stroke="#ae1515" stroke-width="2"
-                                                     stroke-linecap="round" stroke-linejoin="round"
-                                                     class="feather feather-arrow-up-right">
-                                                    <line x1="7" y1="17" x2="17" y2="7" />
-                                                    <polyline points="7 7 17 7 17 17" />
-                                                </svg>
-                                            @else
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                                     viewBox="0 0 24 24" stroke="#00a304" stroke-width="2"
-                                                     stroke-linecap="round" stroke-linejoin="round"
-                                                     class="feather feather-arrow-down-right">
-                                                    <line x1="7" y1="7" x2="17" y2="17"></line>
-                                                    <polyline points="17 7 17 17 7 17"></polyline>
-                                                </svg>
-                                            @endif
-                                        </td>
-                                        <td>
-                                            {{ $history->price_before_gross }} zł
-                                            <small class="d-inline-block w-100">{{ $history->price_before_per_mkw }} zł/m<sup>2</sup></small>
-                                        </td>
-                                        <td>
-                                            {{ $history->price_gross }} zł
-                                            <small class="d-inline-block w-100">{{ $history->price_per_mkw }} zł/m<sup>2</sup></small>
-                                        </td>
-                                        <td>
-                                            {{ $history->formatted_date_modified }}
-                                        </td>
+                                        <th></th>
+                                        <th>Stara cena</th>
+                                        <th>Nowa cena</th>
+                                        <th>Data zmiany</th>
                                     </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+
+                                    @foreach($property->priceHistory as $history)
+                                        <tr>
+                                            <td>
+                                                @if($history->price_brutto < $history->new_price_brutto)
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                         fill="none" stroke="#ae1515" stroke-width="2"
+                                                         stroke-linecap="round" stroke-linejoin="round"
+                                                         class="feather feather-arrow-up-right">
+                                                        <line x1="7" y1="17" x2="17" y2="7" />
+                                                        <polyline points="7 7 17 7 17 17" />
+                                                    </svg>
+                                                @else
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                                         viewBox="0 0 24 24" stroke="#00a304" stroke-width="2"
+                                                         stroke-linecap="round" stroke-linejoin="round"
+                                                         class="feather feather-arrow-down-right">
+                                                        <line x1="7" y1="7" x2="17" y2="17"></line>
+                                                        <polyline points="17 7 17 17 7 17"></polyline>
+                                                    </svg>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @money($history->price_brutto)
+                                                <small class="d-inline-block w-100">@money($history->price_brutto / $history->area)/m<sup>2</sup></small>
+                                            </td>
+                                            <td>
+                                                @money($history->new_price_brutto) zł
+                                                <small class="d-inline-block w-100">@money($history->new_price_brutto / $history->area)/m<sup>2</sup></small>
+                                            </td>
+                                            <td>
+                                                {{ $history->changed_at }}
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer border-0">
-                    <button type="button" class="custom-button mt-0mt-md-10" data-bs-dismiss="modal">Zamknij</button>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="bttn bttn-icon bttn-white" data-bs-dismiss="modal">Zamknij</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     @endif
 @endsection
 @push('scripts')

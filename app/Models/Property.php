@@ -94,14 +94,14 @@ class Property extends Model
         'promotion_price_show' => 'boolean',
     ];
 
-    public function priceHistory($date = '2025-09-11')
-    {
-        return $this->hasMany(PriceHistory::class, 'real_estate_id')
-            ->where('date_modified', '>', $date)
-            ->whereNotNull('price_before_gross')
-            ->where('price_before_gross', '>', 0)
-            ->orderBy('date_modified', 'desc'); // newest first
-    }
+//    public function priceHistory($date = '2025-09-11')
+//    {
+//        return $this->hasMany(PriceHistory::class, 'real_estate_id')
+//            ->where('date_modified', '>', $date)
+//            ->whereNotNull('price_before_gross')
+//            ->where('price_before_gross', '>', 0)
+//            ->orderBy('date_modified', 'desc'); // newest first
+//    }
 
     /**
      * Get next property
@@ -217,10 +217,10 @@ class Property extends Model
         return $this->belongsTo(Client::class, 'client_id');
     }
 
-//    public function priceHistory(): HasMany
-//    {
-//        return $this->hasMany(PropertyPrice::class)->orderBy('changed_at', 'desc');
-//    }
+    public function priceHistory(): HasMany
+    {
+        return $this->hasMany(PropertyPrice::class)->orderBy('changed_at', 'desc');
+    }
 
     public function lowestPriceLast30Days()
     {

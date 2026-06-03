@@ -87,28 +87,31 @@
 #offerModal #relatedProperty li strong {
   font-weight: 600;
 }
-#offerModal .modal-footer .btn {
-  font-size: 13px;
-  padding: 9px 42px;
+#priceHistoryModal .modal-header,
+#priceHistoryModal .modal-footer {
+  background: #003761;
 }
-#offerModal .modal-footer .btn.btn-secondary {
-  background: #c6c6c6;
-  border-color: #c6c6c6;
-  color: #515151;
+#priceHistoryModal .modal-header .btn-close {
+  --bs-btn-close-color: #fff;
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
-#offerModal .modal-footer .btn.btn-secondary:hover {
-  background: #4f4f4f;
-  border-color: #4f4f4f;
-  color: #fff;
+#priceHistoryModal .modal-footer .bttn {
+  color: #003761;
+  justify-content: center;
+  padding: 10px 50px;
 }
-#offerModal .modal-footer .btn.btn-primary {
-  background: #cfab6f;
-  border-color: #cfab6f;
+#priceHistoryModal .modal-content td {
+  line-height: 1.2;
+  vertical-align: middle;
+}
+#priceHistoryModal .modal-content small {
+  color: #848282;
+}
+.custom-button {
+  background: #003761;
   color: white;
-  font-weight: 600;
-}
-#offerModal .modal-footer .btn.btn-primary:hover {
-  background: #bf9959;
-  border-color: #bf9959;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 13px;
 }
 /*# sourceMappingURL=history.css.map */
