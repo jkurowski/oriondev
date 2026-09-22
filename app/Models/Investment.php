@@ -384,7 +384,17 @@ class Investment extends Model
 
     public function activeProperties(): HasMany
     {
-        return $this->hasMany('App\Models\Property')->where('status', 1);
+        return $this->hasMany('App\Models\Property')
+            ->where('status', 1)
+            ->where(function ($query) {
+                // budynki ukryte w CMS (active = 0) nie trafiają do raportu cen;
+                // lokale bez przypisanego budynku (np. domy) zostają
+                $query->whereNull('building_id')
+                    ->orWhere('building_id', 0)
+                    ->orWhereHas('building', function ($building) {
+                        $building->where('active', 1);
+                    });
+            });
     }
 
 }
