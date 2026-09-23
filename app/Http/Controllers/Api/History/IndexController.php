@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\History;
 use App\Helpers\PropertyAreaTypes;
 use App\Http\Controllers\Controller;
 use App\Models\Investment;
+use App\Services\BuildingService;
 use DOMDocument;
 use DOMXPath;
 use Illuminate\Support\Facades\Log;
@@ -105,7 +106,7 @@ class IndexController extends Controller
         $today = now()->format('Y-m-d');
         $investments = Investment::where('status', 1)
             ->where('id', '!=', 43)
-            ->with(['company', 'salePoint'])
+            ->with(['company', 'salePoint', 'activeProperties.building'])
             ->get();
         foreach ($investments as $investment) {
 
@@ -329,9 +330,7 @@ class IndexController extends Controller
                     'X',
 
                     //Adres strony internetowej, pod którym dostępny jest prospekt informacyjny
-                    isset($investment->file_brochure)
-                        ? $baseUrl . "investment/brochure/".$investment->file_brochure
-                        : 'X',
+                    BuildingService::brochureUrl($investment, $property->building, $baseUrl),
                 ];
 
                 $csv->insertOne($row);
@@ -445,6 +444,7 @@ class IndexController extends Controller
         $today = now()->format('Y-m-d');
         //$investments = Investment::where('status', 1)->with(['company', 'salePoint', 'properties'])->get();
         $investment->with(['company', 'salePoint', 'properties'])->get();
+        $investment->load('activeProperties.building');
 
         $baseUrl = config('app.url');
 
@@ -662,9 +662,7 @@ class IndexController extends Controller
                 'X',
 
                 //Adres strony internetowej, pod którym dostępny jest prospekt informacyjny
-                isset($investment->file_brochure)
-                    ? $baseUrl . "investment/brochure/".$investment->file_brochure
-                    : 'X',
+                BuildingService::brochureUrl($investment, $property->building, $baseUrl),
             ];
 
             echo '<tr>';

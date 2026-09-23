@@ -21,6 +21,7 @@ class Building extends Model
         'cords',
         'file',
         'file_webp',
+        'file_brochure',
         'meta_title',
         'meta_description',
         'meta_robots',

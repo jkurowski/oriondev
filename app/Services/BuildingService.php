@@ -45,4 +45,38 @@ class BuildingService
             'file_webp' => $name_webp
         ]);
     }
+
+    public function uploadBrochure(string $title, UploadedFile $file, object $model, bool $delete = false)
+    {
+        if ($delete && !empty($model->file_brochure)) {
+            $brochurePath = public_path('investment/brochure/' . $model->file_brochure);
+
+            if (File::exists($brochurePath) && File::isFile($brochurePath)) {
+                File::delete($brochurePath);
+            }
+        }
+
+        $name = date('His') . '_budynek-' . Str::slug($title) . '.' . $file->getClientOriginalExtension();
+
+        // Save file to public/investment/brochure
+        $file->move(public_path('investment/brochure'), $name);
+
+        $model->update(['file_brochure' => $name]);
+    }
+
+    /**
+     * Adres prospektu dla lokalu: prospekt budynku, a gdy go brak - prospekt inwestycji
+     */
+    public static function brochureUrl(object $investment, ?object $building, string $baseUrl): string
+    {
+        if (!empty($building?->file_brochure)) {
+            return $baseUrl . 'investment/brochure/' . $building->file_brochure;
+        }
+
+        if (!empty($investment->file_brochure)) {
+            return $baseUrl . 'investment/brochure/' . $investment->file_brochure;
+        }
+
+        return 'X';
+    }
 }

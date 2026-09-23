@@ -75,6 +75,14 @@
                             'file' => $entry->file,
                             'file_preview' => config('images.building_plan.preview_file_path')
                             ])
+
+                        @include('form-elements.html-input-file-pdf', [
+                            'label' => 'Prospekt informacyjny',
+                            'sublabel' => '(jeśli pusty, w raporcie używany jest prospekt inwestycji)',
+                            'name' => 'file_brochure',
+                            'file' => $entry->file_brochure,
+                            'file_preview' => config('images.investment.brochure_file_path')
+                            ])
 {{--                        @include('form-elements.textarea-fullwidth', ['label' => 'Opis', 'name' => 'content', 'value' => $entry->content, 'rows' => 11, 'class' => 'tinymce', 'required' => 1])--}}
                     </div>
                 </div>

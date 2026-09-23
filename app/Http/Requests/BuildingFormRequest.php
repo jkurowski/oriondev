@@ -37,6 +37,7 @@ class BuildingFormRequest extends FormRequest
             "room_range" => '',
             "price_range" => '',
             "content" => '',
+            "file_brochure" => 'nullable|file|mimes:pdf',
             "investment_id" => "required|integer"
         ];
     }
