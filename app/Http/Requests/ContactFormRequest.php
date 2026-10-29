@@ -3,7 +3,9 @@
 namespace App\Http\Requests;
 
 use App\Rules\ReCaptchaV3;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Log;
 
 class ContactFormRequest extends FormRequest
 {
@@ -24,7 +26,7 @@ class ContactFormRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $rules = [
             'name' => 'required',
             'email' => 'required|email:rfc',
             'message' => 'required',
@@ -36,8 +38,26 @@ class ContactFormRequest extends FormRequest
             'investment_name' => 'sometimes|string|max:255',
             'property_name' => 'sometimes|string|max:255',
             'investment_id' => 'sometimes|integer',
-            'g-recaptcha-response' => ['required', new ReCaptchaV3()]
         ];
+
+        if (ReCaptchaV3::enabled()) {
+            $rules['g-recaptcha-response'] = ['required', new ReCaptchaV3()];
+        }
+
+        return $rules;
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        if ($validator->errors()->has('g-recaptcha-response') && !$this->filled('g-recaptcha-response')) {
+            Log::channel('recaptcha')->warning('reCAPTCHA: missing token', [
+                'ip' => $this->ip(),
+                'url' => $this->fullUrl(),
+                'user_agent' => $this->userAgent(),
+            ]);
+        }
+
+        parent::failedValidation($validator);
     }
 
     public function messages()
@@ -48,7 +68,7 @@ class ContactFormRequest extends FormRequest
             'email.email' => 'Podaj poprawny adres e-mail',
             'message.required' => 'Wpisz wiadomość',
             'phone.required' => 'Podaj numer telefonu',
-            'g-recaptcha-response.required' => 'Potwierdź, że nie jesteś robotem',
+            'g-recaptcha-response.required' => 'Nie udało się potwierdzić, że nie jesteś robotem. Odśwież stronę i spróbuj ponownie. Jeśli używasz blokera reklam, wyłącz go dla tej strony.',
 
             'rule_1.integer' => 'Nieprawidłowa wartość',
             'rule_2.integer' => 'Nieprawidłowa wartość',

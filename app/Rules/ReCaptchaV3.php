@@ -4,6 +4,8 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
+use Throwable;
 
 class ReCaptchaV3 implements Rule
 {
@@ -17,6 +19,15 @@ class ReCaptchaV3 implements Rule
     }
 
     /**
+     * reCAPTCHA is active only when both keys are set in the admin panel.
+     * The front form uses the same condition to render the reCAPTCHA button.
+     */
+    public static function enabled(): bool
+    {
+        return settings()->get('recaptcha_site_key') && settings()->get('recaptcha_secret_key');
+    }
+
+    /**
      * Determine if the validation rule passes.
      *
      * @param  string  $attribute
@@ -25,29 +36,37 @@ class ReCaptchaV3 implements Rule
      */
     public function passes($attribute, $value)
     {
-        $siteVerify = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret' => config('services.recaptcha_v3.secretKey'),
-            'response' => $value,
-        ]);
-
-        if ($siteVerify->failed()) {
+        try {
+            $siteVerify = Http::asForm()->timeout(10)->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret' => settings()->get('recaptcha_secret_key'),
+                'response' => $value,
+                'remoteip' => request()->ip(),
+            ]);
+        } catch (Throwable $e) {
+            $this->log('siteverify request failed', ['exception' => $e->getMessage()]);
             return false;
         }
 
-        if ($siteVerify->successful()) {
-            $body = $siteVerify->json();
+        if ($siteVerify->failed()) {
+            $this->log('siteverify HTTP error', ['status' => $siteVerify->status()]);
+            return false;
+        }
 
-            if ($body['success'] !== true) {
-                return false;
-            }
+        $body = $siteVerify->json() ?? [];
 
-            if (!is_null($this->action) && $this->action != $body['action']) {
-                return false;
-            }
+        if (($body['success'] ?? false) !== true) {
+            $this->log('token rejected', ['error-codes' => $body['error-codes'] ?? []]);
+            return false;
+        }
 
-            if (!is_null($this->minScore) && $this->minScore > $body['score']) {
-                return false;
-            }
+        if (!is_null($this->action) && $this->action != ($body['action'] ?? null)) {
+            $this->log('action mismatch', ['expected' => $this->action, 'action' => $body['action'] ?? null]);
+            return false;
+        }
+
+        if (!is_null($this->minScore) && $this->minScore > ($body['score'] ?? 0)) {
+            $this->log('score too low', ['min' => $this->minScore, 'score' => $body['score'] ?? null]);
+            return false;
         }
 
         return true;
@@ -60,6 +79,15 @@ class ReCaptchaV3 implements Rule
      */
     public function message()
     {
-        return 'Google reCAPTCHA validation failed.';
+        return 'Nie udało się potwierdzić, że nie jesteś robotem. Odśwież stronę i spróbuj ponownie.';
+    }
+
+    private function log(string $reason, array $context = []): void
+    {
+        Log::channel('recaptcha')->warning('reCAPTCHA: ' . $reason, $context + [
+            'ip' => request()->ip(),
+            'url' => request()->fullUrl(),
+            'user_agent' => request()->userAgent(),
+        ]);
     }
 }

@@ -114,9 +114,14 @@
 
                     <div class="col-12 mt-5">
                        <input name="page" type="hidden" value="{{ $page_name }}">
+                        @if(\App\Rules\ReCaptchaV3::enabled())
+                        <div class="alert alert-warning border-0 d-none" id="recaptcha-error" role="alert">
+                            Nie udało się załadować zabezpieczenia reCAPTCHA, więc wiadomości nie można wysłać. Odśwież stronę, a jeśli używasz blokera reklam, wyłącz go dla tej strony.
+                        </div>
+                        @endif
                         <script type="text/javascript">
-                            @if(settings()->get("recaptcha_site_key") && settings()->get("recaptcha_secret_key"))
-                            document.write("<button type=\"submit\" class=\"bttn bttn-icon g-recaptcha\" data-sitekey=\"{{ settings()->get("recaptcha_site_key") }}\" data-callback=\"onRecaptchaSuccess\" data-action=\"submitContact\">Wyślij wiadomość <span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><g clip-path=\"url(#sendIcon)\"><path d=\"M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z\"/></g><defs><clipPath id=\"sendIcon\"><rect width=\"12.0465\" height=\"12.0465\" transform=\"translate(0 8.51855) rotate(-45)\"/></clipPath></defs></svg></span></button>");
+                            @if(\App\Rules\ReCaptchaV3::enabled())
+                            document.write("<button type=\"submit\" class=\"bttn bttn-icon g-recaptcha\" disabled data-sitekey=\"{{ settings()->get("recaptcha_site_key") }}\" data-callback=\"onRecaptchaSuccess\" data-action=\"submitContact\">Wyślij wiadomość <span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><g clip-path=\"url(#sendIcon)\"><path d=\"M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z\"/></g><defs><clipPath id=\"sendIcon\"><rect width=\"12.0465\" height=\"12.0465\" transform=\"translate(0 8.51855) rotate(-45)\"/></clipPath></defs></svg></span></button>");
                             @else
                             document.write("<button class=\"bttn bttn-icon\" type=\"submit\">Wyślij wiadomość<span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><g clip-path=\"url(#sendIcon)\"><path d=\"M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z\"/></g><defs><clipPath id=\"sendIcon\"><rect width=\"12.0465\" height=\"12.0465\" transform=\"translate(0 8.51855) rotate(-45)\"/></clipPath></defs></svg></span></button>");
                             @endif
@@ -131,7 +136,41 @@
 @push('scripts')
     <script src="{{ asset('js/validation.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/pl.js') }}" charset="utf-8"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    @if(\App\Rules\ReCaptchaV3::enabled())
+    <script type="text/javascript">
+        function recaptchaLoadFailed() {
+            $("#recaptcha-error").removeClass("d-none");
+            $("#contact-form .g-recaptcha").prop("disabled", true);
+        }
+
+        function onRecaptchaLoad() {
+            clearTimeout(window.recaptchaLoadTimeout);
+            $("#recaptcha-error").addClass("d-none");
+            $("#contact-form .g-recaptcha").prop("disabled", false);
+        }
+
+        // Bloker może nie zgłosić błędu, tylko zostawić skrypt w zawieszeniu
+        window.recaptchaLoadTimeout = setTimeout(function() {
+            if (typeof grecaptcha === "undefined") {
+                recaptchaLoadFailed();
+            }
+        }, 15000);
+
+        $(document).ready(function(){
+            // Nie wysyłaj formularza bez tokenu (np. kliknięcie zanim reCAPTCHA się załaduje)
+            $("#contact-form").on("submit", function(e) {
+                if (!$(this).find('[name="g-recaptcha-response"]').val()) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    if (typeof grecaptcha === "undefined") {
+                        recaptchaLoadFailed();
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad" async defer onerror="recaptchaLoadFailed()"></script>
+    @endif
     <script type="text/javascript">
         $(document).ready(function(){
             $(".validateForm").validationEngine({
