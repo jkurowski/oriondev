@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /polityka-prywatnosci
+
+Sitemap: https://oriondevelopment.pl/sitemap.xml

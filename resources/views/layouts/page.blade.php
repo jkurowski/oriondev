@@ -25,10 +25,16 @@
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=03062026" />
+    <link rel="stylesheet" href="{{ asset('css/customstyles.css') }}" />
 
     <!-- Preloads -->
     <link rel="preload" href="{{ asset('images/logo-white-png.png') }}" as="image" />
     <!-- /Preloads -->
+
+    <link rel="canonical" href="{{url()->current();}}" />
+    <link rel="icon" type="image/x-icon" href="/images/orion-fav.ico">
+
+    <meta name="google-site-verification" content="YlGHuqt30iHWImG5UvJuEbU76fE8BoXdE5ASrg5pITE" />
 
     @yield('schema')
 

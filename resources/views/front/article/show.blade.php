@@ -1,8 +1,12 @@
+
+
 @extends('layouts.page', ['body_class' => 'position-relative', 'body_id' => 'page-blog'])
 
 @section('meta_title', $page->title ?? 'Aktualności' . ' - '.$article->title)
-@section('seo_title',$page->meta_title ?? '')
-@section('seo_description', $page->meta_description ?? '')
+{{-- @section('seo_title',$page->meta_title ?? '') --}}
+@section('seo_title',$article->meta_title ?? '')
+@section('seo_description', $article->meta_description ?? '')
+{{-- @section('seo_description', $page->meta_description ?? '') --}}
 @section('seo_robots', $page->meta_robots ?? '')
 
 @section('content')

@@ -156,7 +156,7 @@
                             </span>
                                 <h2 class="big">Wybierz idealne <br>miejsce do życia</h2>
                             </div>
-                            <p>Jako ORION DEVELOPMENT prowadzimy sprzedaż mieszkań w atrakcyjnych lokalizacjach i o wysokim standardzie. Stawiamy na rozwiązania przyjazne środowisku, ekologiczne, kładąc nacisk na potrzeby przyszłych mieszkańców.</p>
+                            <p>Jako ORION DEVELOPMENT prowadzimy sprzedaż <strong>mieszkań w Łodzi</strong> w atrakcyjnych lokalizacjach i o wysokim standardzie. Jesteśmy <strong>deweloperem </strong>stawiającym na ekologiczne rozwiązania. Kładziemy nacisk na potrzeby przyszłych mieszkańców, dlatego zapewniamy przyjazne środowisku projekty, które jednocześnie gwarantują wysoki komfort życia. Nasze osiedle urzeka kameralnym charakterem i niską, trzypiętrową zabudową. Wygodne przemieszczanie się ułatwiają nowoczesne windy. Zadbaliśmy również o miejsca w garażu podziemnym.</p>
                         </div>
                         <img src="{{ asset('images/usmiechnieta-para-w-nowym-mieszkaniu.jpg') }}" alt="" width="700" height="450" class="d-none d-lg-block mt-5">
                     </div>
@@ -207,7 +207,7 @@
                                 </span>
                             <h2 class="big">Równowaga, którą pokochasz</h2>
                         </div>
-                        <p>Duo Park to niezwykłe miejsce na mapie Łodzi – położone blisko centrum, a jednocześnie otulone zielenią, z kojącymi widokami i szumem urokliwej rzeki Jasień.  Właśnie tutaj może powstać Twój nowy dom. Wyobraź sobie poranki w miejscu, gdzie natura gra pierwsze skrzypce, a aromatycznej kawie towarzyszy śpiew ptaków.</p>
+                        <p>Duo Park to niezwykłe miejsce na mapie <strong>Łodzi </strong>– położone blisko centrum, a jednocześnie otulone zielenią, z kojącymi widokami i szumem urokliwej rzeki Jasień. Właśnie tutaj może powstać Twój nowy dom. Wyobraź sobie poranki w miejscu, gdzie natura gra pierwsze skrzypce, a aromatycznej kawie towarzyszy śpiew ptaków.</p>
                     </div>
                 </div>
 
@@ -361,7 +361,7 @@
                                 DEWELOPER
                             </span>
                             <h2 class="big">Z myślą o Twoim komforcie</h2>
-                            <p>Właściciele firmy ORION DEVELOPMENT związani są z branżą od 1997 roku kiedy po raz pierwszy zaczęli zajmować się kompleksową obsługą rynku nieruchomości. Działalność developerską rozpoczęli mając już doświadczenie w obsłudze klientów poszukujących powierzchni mieszkalnych zarówno na rynku pierwotnym jak i wtórnym.</p>
+                            <p>Właściciele firmy ORION DEVELOPMENT związani są z branżą od 1997 roku, kiedy po raz pierwszy zaczęli zajmować się kompleksową obsługą rynku nieruchomości. Działalność jako <strong>deweloper </strong>rozpoczęli, mając już doświadczenie w obsłudze klientów z <strong>Łodzi </strong>poszukujących <strong>mieszkań</strong> zarówno na rynku pierwotnym, jak i wtórnym.</p>
                             <a class="bttn bttn-icon mt-3 mt-sm-5" href="{{ route('front.menu.show', ['uri' => 'o-firmie']) }}">Więcej o firmie <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><g clip-path="url(#sendIcon)"><path d="M4.9776 4.25018L4.97086 6.26437L9.35486 6.26437L3.55046 12.0688L4.96731 13.4856L10.7717 7.68122L10.7717 12.0652L12.7859 12.0585L12.777 4.25905L4.9776 4.25018Z"/></g><defs><clipPath id="sendIcon"><rect width="12.0465" height="12.0465" transform="translate(0 8.51855) rotate(-45)"/></clipPath></defs></svg></span></a>
                         </div>
                     </div>
@@ -369,7 +369,7 @@
             </div>
         </section>
 
-        <section id="numbers">
+        <section id="numbers" style="padding-bottom: clamp(30px, 10vw, 170px) !important;">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-4 d-flex justify-content-start justify-content-sm-center justify-content-lg-start">
@@ -388,6 +388,26 @@
                         <div class="numerbox">
                             <span>765</span>
                             <p class="ps-3 ps-xl-4">sprzedanych <br>mieszkań</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flair" class="section-mobile mt-4 mb-4">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-12 mt-4 mt-lg-0">
+                        <div class="section-header">
+                            <h2 class="big">Co nas wyróżnia wśród firm deweloperskich w Łodzi?</h2>
+                            <p>Budujemy naszą pozycję na solidnym fundamencie opartym na niemal 30 latach obecności w branży nieruchomości. Każda zrealizowana przez nas inwestycja odzwierciedla dbałość o najwyższe standardy wykonania oraz ekologiczne podejście do przestrzeni do życia. Jesteśmy najlepszym wyborem wśród<strong> firm deweloperskich </strong>z<strong> Łodzi</strong>, ponieważ:</p>
+                            <ul>
+                            <li>mamy bogate doświadczenie potwierdzone 10 sfinalizowanymi projektami deweloperskimi, co pozwala nam doskonalić standardy budowlane na podstawie doświadczeń gromadzonych przez lata;</li>
+                            <li>jesteśmy otwarci na dialog z nabywcami, umożliwiając ponowne oględziny lokali przed wykończeniem, co ułatwia planowanie prac remontowych;</li>
+                            <li>zapewniamy elastyczne podejście do zmian lokatorskich oraz wsparcie doświadczonych inżynierów obecnych na placu budowy;</li>
+                            <li>dokonujemy starannego wyboru enklaw spokoju łączących bliskość natury z szybkim dostępem do centrum;</li>
+                            <li>oferujemy kompleksową usługę wykończenia <strong>mieszkań </strong>pod klucz, dzięki której oszczędzasz czas i unikasz napięć związanych z samodzielną koordynacją ekip remontowych.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
