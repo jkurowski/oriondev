@@ -8,7 +8,7 @@
             <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                 <ul class="mb-0 list-unstyled footer-contact">
                     <li><a href="tel:+48512380000">+48 512 380 000</a> - Małgorzata</li>
-                    <li><a href="tel:+48512370000">+48 512 370 000</a> - Monika</li>
+                    <li><a href="tel:+48512370000">+48 512 370 000</a> - Barbara</li>
                     <li><a href="mailto:oriondevelopment@o2.pl">oriondevelopment@o2.pl</a></li>
                 </ul>
             </div>
