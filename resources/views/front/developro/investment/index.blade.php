@@ -2,9 +2,7 @@
 
 @section('meta_title', $page->title ?? 'Inwestycje w sprzedaży')
 @section('seo_title',$page->meta_title ?? '')
-@section('seo_title', $investment_page->meta_title ?? '')
 @section('seo_description', $page->meta_description ?? '')
-@section('seo_description', $investment_page->meta_description ?? '')
 @section('seo_robots', $page->meta_robots ?? '')
 
 @section('content')

@@ -2,13 +2,12 @@
 
 @isset($page)
     @section('meta_title', $page->title.' - '.$investment->name.' - Plan inwestycji')
-    @section('seo_title', $page->meta_title)
     @if(url()->current() === url('/i/duo-park/plan-inwestycji'))
         @section('seo_title', 'Mieszkania na sprzedaż Duo Park – Łódź – Orion Development')
-    @endif
-    @section('seo_description', $page->meta_description)
-    @if(url()->current() === url('/i/duo-park/plan-inwestycji'))
         @section('seo_description', 'Wybierz wygodne mieszkanie na sprzedaż w Łodzi w dzielnicy Górna. Zobacz interaktywny plan inwestycji Duo Park i sprawdź układy lokali 1–4 pokojowych.')
+    @else
+        @section('seo_title', $page->meta_title)
+        @section('seo_description', $page->meta_description)
     @endif
     @section('seo_robots', $page->meta_robots)
 @endisset
